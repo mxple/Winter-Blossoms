@@ -8,33 +8,28 @@ glide = keyboard_check(ord("W"));
 crouch = keyboard_check(ord("S"));
 sprint = keyboard_check(vk_shift);
 
+var hmove = right - left;
 if sprint {
-	if left {
-		xspeed = -runspd;
-	} else if right {
-		xspeed = runspd;
-	} else {
-		xspeed = 0;
-	}
+	xspeed += hmove * 0.6;
+	xspeed = clamp(xspeed, -runspd, runspd);	
 } else {
-	if left {
-		xspeed = -walkspd;
-	} else if right {
-		xspeed = walkspd;
-	} else {
-		xspeed = 0;
-	}
+	xspeed += hmove * 0.4;
+	xspeed = clamp(xspeed, -walkspd, walkspd);	
 }
+if hmove = 0 {
+	xspeed = lerp(xspeed, 0, 0.35);
+}
+ 
 
 ///jumping and gliding
 if !place_meeting(x, y + 1, collidable) {
 	if (glide and !jump and yspeed > 0) {
-		yspeed += 0.3;
+		yspeed = 2.8; ///glide resistance
 	} else {
 		yspeed += gravity_;
 	}
 	if (doubleJump and jump) {
-		yspeed = jumpSpeed + 3;
+		yspeed = jumpSpeed + 1; ///double jump height
 		doubleJump = false;
 	}
 } else if jump {
@@ -46,7 +41,7 @@ if !place_meeting(x, y + 1, collidable) {
 if place_meeting(x + xspeed, y, collidable) {
 	while !place_meeting(x + sign(xspeed), y, collidable) {
 		x += sign(xspeed);
-	}
+	} 
 	xspeed = 0;
 }
 

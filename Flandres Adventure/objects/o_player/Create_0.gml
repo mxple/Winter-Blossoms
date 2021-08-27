@@ -1,8 +1,8 @@
 /// @description Creating variables
 xspeed = 0;
 yspeed = 0;
-walkspd = 5;
+walkspd = 5.4;
 runspd = 8;
-gravity_ = 1;
-jumpSpeed = -18;
+gravity_ = .72;
+jumpSpeed = -12.4;
 doubleJump = true;
