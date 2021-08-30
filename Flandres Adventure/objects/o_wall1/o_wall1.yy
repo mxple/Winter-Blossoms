@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_wallInner1",
-    "path": "sprites/s_wallInner1/s_wallInner1.yy",
+    "name": "s_wall1",
+    "path": "sprites/s_wall1/s_wall1.yy",
   },
   "solid": false,
   "visible": true,
@@ -31,7 +31,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_wallInner1",
+  "name": "o_wall1",
   "tags": [],
   "resourceType": "GMObject",
 }

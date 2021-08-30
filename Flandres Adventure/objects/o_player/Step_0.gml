@@ -24,7 +24,7 @@ if hmove = 0 {
 ///jumping and gliding
 if !place_meeting(x, y + 1, collidable) {
 	if (glide and !jump and yspeed > 0) {
-		yspeed = 2.8; ///glide resistance
+		yspeed = 4; ///glide resistance
 	} else {
 		yspeed += gravity_;
 	}

@@ -6,3 +6,4 @@ runspd = 8;
 gravity_ = .72;
 jumpSpeed = -12.4;
 doubleJump = true;
+dir = 1;
