@@ -1,13 +1,17 @@
 {
   "resources": [
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},"order":0,},
+    {"id":{"name":"ceiling","path":"objects/ceiling/ceiling.yy",},"order":4,},
     {"id":{"name":"s_bow","path":"sprites/s_bow/s_bow.yy",},"order":2,},
     {"id":{"name":"s_player","path":"sprites/s_player/s_player.yy",},"order":0,},
     {"id":{"name":"s_wall1","path":"sprites/s_wall1/s_wall1.yy",},"order":1,},
+    {"id":{"name":"s_collidable","path":"sprites/s_collidable/s_collidable.yy",},"order":4,},
     {"id":{"name":"Shader1","path":"shaders/Shader1/Shader1.yy",},"order":15,},
+    {"id":{"name":"o_defaultWall","path":"objects/o_defaultWall/o_defaultWall.yy",},"order":3,},
     {"id":{"name":"t_wall1","path":"tilesets/t_wall1/t_wall1.yy",},"order":0,},
     {"id":{"name":"o_wall1","path":"objects/o_wall1/o_wall1.yy",},"order":1,},
     {"id":{"name":"collidable","path":"objects/collidable/collidable.yy",},"order":2,},
+    {"id":{"name":"s_defaultWall","path":"sprites/s_defaultWall/s_defaultWall.yy",},"order":3,},
     {"id":{"name":"Spawn","path":"rooms/Spawn/Spawn.yy",},"order":0,},
   ],
   "Options": [

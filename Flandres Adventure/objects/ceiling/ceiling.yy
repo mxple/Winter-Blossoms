@@ -28,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "collidable",
+  "name": "ceiling",
   "tags": [],
   "resourceType": "GMObject",
 }

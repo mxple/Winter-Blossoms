@@ -34,24 +34,27 @@ if !place_meeting(x, y + 1, collidable) {
 	}
 } else if jump {
 	yspeed = jumpSpeed;
-	jumpcount++;
+	
 }
 
 ///collisions
 if place_meeting(x + xspeed, y, collidable) {
-	while !place_meeting(x + sign(xspeed), y, collidable) {
+	/*while !place_meeting(x + sign(xspeed), y, collidable) {
 		x += sign(xspeed);
-	} 
+	} */
 	xspeed = 0;
 }
 
 x += xspeed;
 
 if place_meeting(x, y + yspeed, collidable) {
-	jumpcount = 0;
 	yspeed = 0;
 	doubleJump = true;
 }
+if place_meeting(x, y + yspeed, ceiling) {
+	yspeed = 0;
+}
+
 
 y += yspeed;
 

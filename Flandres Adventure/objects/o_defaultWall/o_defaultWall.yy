@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "s_collidable",
-    "path": "sprites/s_collidable/s_collidable.yy",
+    "name": "s_defaultWall",
+    "path": "sprites/s_defaultWall/s_defaultWall.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "collidable",
+    "path": "objects/collidable/collidable.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -28,7 +31,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "collidable",
+  "name": "o_defaultWall",
   "tags": [],
   "resourceType": "GMObject",
 }
