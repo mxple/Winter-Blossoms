@@ -8,6 +8,7 @@
     {"id":{"name":"s_collidable","path":"sprites/s_collidable/s_collidable.yy",},"order":4,},
     {"id":{"name":"Shader1","path":"shaders/Shader1/Shader1.yy",},"order":15,},
     {"id":{"name":"o_defaultWall","path":"objects/o_defaultWall/o_defaultWall.yy",},"order":3,},
+    {"id":{"name":"s_wall_bg1","path":"sprites/s_wall_bg1/s_wall_bg1.yy",},"order":5,},
     {"id":{"name":"t_wall1","path":"tilesets/t_wall1/t_wall1.yy",},"order":0,},
     {"id":{"name":"o_wall1","path":"objects/o_wall1/o_wall1.yy",},"order":1,},
     {"id":{"name":"collidable","path":"objects/collidable/collidable.yy",},"order":2,},
