@@ -18,18 +18,25 @@ if hmove = 0 {
 
 ///jumping and gliding
 if !place_meeting(x, y + 1, collidable) {
-	if (glide and !jump and yspeed > 0) {
-		yspeed = 3.5; ///glide resistance
-	} else {
-		yspeed += gravity_;
-	}
-	if (doubleJump and jump and charm_doublejump) {
-		yspeed = jumpSpeed + 1; ///double jump height
+	/*if (doubleJump and jump and charm_doublejump) {
+		yspeed = jumpSpeed; ///double jump height
 		doubleJump = false;
+	}*/ 
+	if !glide and yspeed < 0 {
+		gravity_ *=1.7;
+	} else {
+		gravity_ = 0.6;
 	}
+	
 } else if jump {
-	yspeed = jumpSpeed;
+	yspeed += jumpSpeed;
 }
+
+///gravity
+if glide and yspeed > 2.5 {
+	yspeed = 2.5; ///glide resistance
+}
+yspeed += gravity_;
 
 ///collisions
 if place_meeting(x + xspeed, y, collidable) {
