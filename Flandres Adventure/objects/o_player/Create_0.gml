@@ -1,4 +1,4 @@
-/// @description Creating variables
+ /// @description Creating variables
 xspeed = 0;
 yspeed = 0;
 walkspd = 5.4;
@@ -21,3 +21,4 @@ key_dash = ord("X");
 charm_doublejump = false;
 charm_glide = false;
 charm_dash = false;
+
