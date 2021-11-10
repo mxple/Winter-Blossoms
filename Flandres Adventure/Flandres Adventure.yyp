@@ -17,6 +17,7 @@
     {"id":{"name":"s_snowTileset","path":"sprites/s_snowTileset/s_snowTileset.yy",},"order":6,},
     {"id":{"name":"t_wall1","path":"tilesets/t_wall1/t_wall1.yy",},"order":0,},
     {"id":{"name":"o_wall1","path":"objects/o_wall1/o_wall1.yy",},"order":1,},
+    {"id":{"name":"tile_meeting","path":"scripts/tile_meeting/tile_meeting.yy",},"order":0,},
     {"id":{"name":"collidable","path":"objects/collidable/collidable.yy",},"order":2,},
     {"id":{"name":"s_defaultWall","path":"sprites/s_defaultWall/s_defaultWall.yy",},"order":3,},
     {"id":{"name":"Spawn","path":"rooms/Spawn/Spawn.yy",},"order":0,},
