@@ -1,6 +1,7 @@
 /// @description Player Movement
 
 ///initialize variables
+var bbox_side;
 left = keyboard_check(key_left);
 right = keyboard_check(key_right);
 jump = keyboard_check_pressed(key_jump);
@@ -14,6 +15,24 @@ xspeed = clamp(xspeed, -walkspd, walkspd);
 
 if hmove = 0 {
 	xspeed = lerp(xspeed, 0, 0.35);
+}
+yspeed= -1*gravity_;
+//Tile Collisions
+posx = xspeed>0;
+if (posx) bbox_side = bbox_right; else bbox_side = bbox_left;
+if (tilemap_get_at_pixel(t_collidable,bbox_side+xspeed,bbox_top) != 0) || (tilemap_get_at_pixel(t_collidable,bbox_side+xspeed, bbox_bottom) != 0)
+{
+	if (posx) x = x - (x % 16) + 15 - (bbox_right - x);
+	else x = x - (x % 16) -(bbox_left - x);
+	xspeed = 0;
+}
+posy = yspeed>0;
+if (posy) bbox_side = bbox_bottom; else bbox_side = bbox_top;
+if((tilemap_get_at_pixel(t_collidable, bbox_left,bbox_side+ceil(yspeed)) != 0) || (tilemap_get_at_pixel(t_collidable, bbox_right, bbox_side+ceil(y_speed)) != 0 ))
+{
+	if (posy) y = y - (y % 16) + 15 - (bbox_bottom - y);
+	else y = y - (y % 16) -(bbox_top - y);
+	yspeed = 0;
 }
 
 ///jumping and gliding
@@ -40,13 +59,10 @@ yspeed += gravity_;
 
 ///collisions
 if place_meeting(x + xspeed, y, collidable) {
-	/*while !place_meeting(x + sign(xspeed), y, collidable) {
-		x += sign(xspeed);
-	} */
+
 	xspeed = 0;
 }
 
-x += xspeed;
 
 if place_meeting(x, y + yspeed, collidable) {
 	yspeed = 0;
@@ -55,7 +71,8 @@ if place_meeting(x, y + yspeed, collidable) {
 if place_meeting(x, y + yspeed, ceiling) {
 	yspeed = 0;
 }
+*/
 
-
+x += xspeed;
 y += yspeed;
 
