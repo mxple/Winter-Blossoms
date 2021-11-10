@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"tileMeeting","path":"scripts/tileMeeting/tileMeeting.yy",},"order":0,},
     {"id":{"name":"o_player","path":"objects/o_player/o_player.yy",},"order":0,},
     {"id":{"name":"t_collidable","path":"tilesets/t_collidable/t_collidable.yy",},"order":2,},
     {"id":{"name":"ceiling","path":"objects/ceiling/ceiling.yy",},"order":4,},
@@ -12,14 +13,11 @@
     {"id":{"name":"s_collidableTile","path":"sprites/s_collidableTile/s_collidableTile.yy",},"order":8,},
     {"id":{"name":"Shader1","path":"shaders/Shader1/Shader1.yy",},"order":15,},
     {"id":{"name":"s_bg","path":"sprites/s_bg/s_bg.yy",},"order":7,},
-    {"id":{"name":"o_defaultWall","path":"objects/o_defaultWall/o_defaultWall.yy",},"order":3,},
     {"id":{"name":"s_wall_bg1","path":"sprites/s_wall_bg1/s_wall_bg1.yy",},"order":5,},
     {"id":{"name":"s_snowTileset","path":"sprites/s_snowTileset/s_snowTileset.yy",},"order":6,},
     {"id":{"name":"t_wall1","path":"tilesets/t_wall1/t_wall1.yy",},"order":0,},
     {"id":{"name":"o_wall1","path":"objects/o_wall1/o_wall1.yy",},"order":1,},
-    {"id":{"name":"tile_meeting","path":"scripts/tile_meeting/tile_meeting.yy",},"order":0,},
     {"id":{"name":"collidable","path":"objects/collidable/collidable.yy",},"order":2,},
-    {"id":{"name":"s_defaultWall","path":"sprites/s_defaultWall/s_defaultWall.yy",},"order":3,},
     {"id":{"name":"Spawn","path":"rooms/Spawn/Spawn.yy",},"order":0,},
   ],
   "Options": [

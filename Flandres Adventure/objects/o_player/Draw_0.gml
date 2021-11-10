@@ -1,8 +1,8 @@
  /// @description Character facing and animation
 
-if (xspeed>0) {
+if (hsp>0) {
 	dir = 1;
-} else if (xspeed<0) {
+} else if (hsp<0) {
 	dir = -1;
 }
 
