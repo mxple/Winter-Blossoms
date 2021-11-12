@@ -19,6 +19,7 @@
     {"id":{"name":"SmallUsefulThings","path":"scripts/SmallUsefulThings/SmallUsefulThings.yy",},"order":1,},
     {"id":{"name":"o_wall1","path":"objects/o_wall1/o_wall1.yy",},"order":1,},
     {"id":{"name":"collidable","path":"objects/collidable/collidable.yy",},"order":2,},
+    {"id":{"name":"Sprite9","path":"sprites/Sprite9/Sprite9.yy",},"order":16,},
     {"id":{"name":"Spawn","path":"rooms/Spawn/Spawn.yy",},"order":0,},
   ],
   "Options": [

@@ -5,6 +5,7 @@ right = keyboard_check(key_right);
 up = keyboard_check(key_up);
 jumping = keyboard_check_pressed(key_jump);
 down = keyboard_check(key_down);
+hold = keyboard_check(key_special);
 if (hsp>0) facing = "right"; else facing = "left";
 if (vsp>0) facing = "down"; else facing = "up";
 
@@ -41,13 +42,23 @@ if (jumping && jump)
 }
 if (vsp < 0) && (!up) vsp = max(vsp,jumpSpeed/4);
 
+//walljumps 
+/*if wallJumpGrace > 0 
+{
+	if jumping and stamina>0 and !(tileMeeting(x, y+8)) {
+		stamina -= 20;
+		hsp += 10;
+}*/
 //grace
-if tileMeeting(x,y+vsp+1)||tileMeeting(x,y+vsp+5) coyote = 5; 
+if tileMeeting(x,y+vsp+1)||tileMeeting(x,y+vsp+5) {
+	coyote = 5; 
+	stamina = staminaMax;
+}
 coyote--;
 if coyote>0 jump = true; else jump = false;
 
 //collision handling
-//horizontal collision
+//horizontal collision and climbing
 if (tileMeeting(x+hsp, y))
 {
 	while (!tileMeeting(x+sign(hsp),y))
@@ -55,15 +66,20 @@ if (tileMeeting(x+hsp, y))
 		x += sign(hsp);
 			wallJump = true;
 	}
-	hsp = 0;
-	//WALLJUMPS WIP (needs to be able to take control away from player)
-	/*if !(tileMeeting(x, y+vsp))&&!(tileMeeting(x, y+vsp+16)) {
+	if (hsp>0) hsp = clamp(hsp, -infinity, 0); else hsp = clamp(hsp, 0, infinity);
+	wallJumpGrace = 4;
+	//wallclimb
+	if !(tileMeeting(x, y+1)) and vsp>0 {
 		vsp*=fric;
-		if jumping {
-			hsp = jumpSpeed;
-			vsp = jumpSpeed*0.8;
-		}
-	}*/
+	}
+	if hold and stamina>0{
+		vsp = 0;
+		stamina -= 1;
+	}
+	if up and stamina>0 and hold {
+		vsp -= climbSpeed;
+		stamina -= 3;
+	}
 }
 
 //vertical collision
@@ -75,7 +91,7 @@ if (tileMeeting(x, y+vsp))
 		}
 	vsp = 0;
 }
-
+show_debug_message(stamina);
 //moving but without decimal jitter yay
 hspRemaining += hsp;
 repeat(abs(hspRemaining)) {
