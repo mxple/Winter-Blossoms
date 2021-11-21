@@ -17,6 +17,7 @@ hsp = 0;
 vsp = 0;
 hspRemaining=0;
 vspRemaining=0;
+state = PLAYERSTATE.FREE;
 
 //controls
 key_left = (vk_left);
@@ -27,3 +28,14 @@ key_jump = ord("C");
 key_special = ord("X");
 key_attack = ord("Z");
 
+
+//other
+hitByAttack = ds_list_create();
+enum PLAYERSTATE
+{
+	FREE,
+	ATTACK_ONE,
+	ATTACK_TWO,
+	ATTACK_THREE,
+	DASH
+}

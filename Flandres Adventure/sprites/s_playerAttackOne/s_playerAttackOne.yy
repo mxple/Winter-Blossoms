@@ -1,5 +1,5 @@
 {
-  "bboxMode": 2,
+  "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
   "origin": 0,
@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 15,
+  "bbox_right": 23,
   "bbox_top": 0,
-  "bbox_bottom": 15,
+  "bbox_bottom": 23,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 16,
-  "height": 16,
+  "width": 24,
+  "height": 24,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"93125886-8f09-4738-8e8e-3128fa588d6c","path":"sprites/s_collidable/s_collidable.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"93125886-8f09-4738-8e8e-3128fa588d6c","path":"sprites/s_collidable/s_collidable.yy",},"LayerId":{"name":"a7f74bae-cdde-49c3-9bd9-995c9ed7bc89","path":"sprites/s_collidable/s_collidable.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_collidable","path":"sprites/s_collidable/s_collidable.yy",},"resourceVersion":"1.0","name":"93125886-8f09-4738-8e8e-3128fa588d6c","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"7ce2c4bb-a63f-40a7-8179-8a01f3b2197f","path":"sprites/s_playerAttackOne/s_playerAttackOne.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7ce2c4bb-a63f-40a7-8179-8a01f3b2197f","path":"sprites/s_playerAttackOne/s_playerAttackOne.yy",},"LayerId":{"name":"ef912c91-3cc0-412e-978c-a56e5e54e733","path":"sprites/s_playerAttackOne/s_playerAttackOne.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_playerAttackOne","path":"sprites/s_playerAttackOne/s_playerAttackOne.yy",},"resourceVersion":"1.0","name":"7ce2c4bb-a63f-40a7-8179-8a01f3b2197f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_collidable","path":"sprites/s_collidable/s_collidable.yy",},
+    "spriteId": {"name":"s_playerAttackOne","path":"sprites/s_playerAttackOne/s_playerAttackOne.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"29e79740-4ab0-4e6a-9202-d011be51a8d2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"93125886-8f09-4738-8e8e-3128fa588d6c","path":"sprites/s_collidable/s_collidable.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6569d8ff-b1fe-4dbe-baa6-5f7519bc4d6e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7ce2c4bb-a63f-40a7-8179-8a01f3b2197f","path":"sprites/s_playerAttackOne/s_playerAttackOne.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_collidable","path":"sprites/s_collidable/s_collidable.yy",},
+    "parent": {"name":"s_playerAttackOne","path":"sprites/s_playerAttackOne/s_playerAttackOne.yy",},
     "resourceVersion": "1.3",
-    "name": "s_collidable",
+    "name": "s_playerAttackOne",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a7f74bae-cdde-49c3-9bd9-995c9ed7bc89","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ef912c91-3cc0-412e-978c-a56e5e54e733","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "s_collidable",
+  "name": "s_playerAttackOne",
   "tags": [],
   "resourceType": "GMSprite",
 }

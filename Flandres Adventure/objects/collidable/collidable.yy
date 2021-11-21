@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "s_collidable",
-    "path": "sprites/s_collidable/s_collidable.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": false,
   "spriteMaskId": null,
