@@ -1,6 +1,6 @@
  /// @description Creating variables
  //physics constants
-walkSpeed = 5.4;
+walkSpeed = 4;
 grav = 1;
 jumpSpeed = -15;
 dragcoef = 10;
@@ -17,7 +17,7 @@ hsp = 0;
 vsp = 0;
 hspRemaining=0;
 vspRemaining=0;
-state = PLAYERSTATE.FREE;
+state = PLAYERSTATE.LOCKED;
 
 //controls
 key_left = (vk_left);
@@ -37,5 +37,5 @@ enum PLAYERSTATE
 	ATTACK_ONE,
 	ATTACK_TWO,
 	ATTACK_THREE,
-	DASH
+	LOCKED
 }

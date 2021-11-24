@@ -33,7 +33,7 @@ function PlayerState_Free() {
 	if (vsp < 0) && (!up) vsp = max(vsp,jumpSpeed/4);
 
 	//grace
-	if tileMeeting(x,y+vsp+1)||tileMeeting(x,y+vsp+5) coyote = 5; 
+	if tileMeeting(x,y+vsp+1)||tileMeeting(x,y+vsp+5) coyote = 6; 
 	coyote--;
 	if coyote>0 jump = true; else jump = false;
 
@@ -94,5 +94,5 @@ function PlayerState_Free() {
 	}
 
 	//other movements (attacks, dashes, blocks)
-	if (attack) state = PLAYERSTATE.ATTACK_ONE;
+	if (attack) pState = PLAYERSTATE.ATTACK_ONE;
 }

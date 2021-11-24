@@ -36,6 +36,6 @@ function PlayerState_Attack_One(){
 	if (animation_end())
 	{
 		sprite_index = s_playerIdle;
-		state = PLAYERSTATE.FREE;
+		pState = PLAYERSTATE.FREE;
 	}
 }

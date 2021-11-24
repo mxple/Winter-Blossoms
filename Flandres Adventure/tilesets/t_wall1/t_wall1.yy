@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "s_wall1",
-    "path": "sprites/s_wall1/s_wall1.yy",
-  },
+  "spriteId": null,
   "tileWidth": 16,
   "tileHeight": 16,
   "tilexoff": 0,
