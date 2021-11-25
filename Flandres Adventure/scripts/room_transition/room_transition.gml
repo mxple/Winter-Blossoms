@@ -4,7 +4,7 @@ function room_transition(m, tRoom=Spawn, alterPosition = false, destinationX = 0
     {
         mode = m;
         targetRoom = tRoom;
-        self.alterPostition = alterPosition;
+        self.alterPosition = alterPosition;
         self.destinationX = destinationX;
         self.destinationY = destinationY;
     }

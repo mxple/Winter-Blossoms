@@ -16,5 +16,5 @@ enum TRANSMODE
 
 mode = TRANSMODE.IN;
 alterPosition = false;
-desinationX = 0;
+destinationX = 0;
 destinationY = 0;
