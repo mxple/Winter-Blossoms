@@ -19,14 +19,6 @@ hspRemaining=0;
 vspRemaining=0;
 state = PLAYERSTATE.LOCKED;
 
-//controls
-key_left = (vk_left);
-key_right = (vk_right);
-key_down = (vk_down);
-key_up = ord("C");
-key_jump = ord("C");
-key_special = ord("X");
-key_attack = ord("Z");
 
 
 //other

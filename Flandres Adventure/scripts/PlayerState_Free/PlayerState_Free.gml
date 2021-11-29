@@ -1,6 +1,6 @@
 function PlayerState_Free() {
 	//horizontal movement
-	hmove = right-left;
+	hmove = INPUT_RIGHT-INPUT_LEFT;
 	if hmove != 0 
 	{
 		hsp += accel*hmove;
@@ -22,15 +22,15 @@ function PlayerState_Free() {
 	{
 		vsp += grav;
 	}
-	if (down) drag/=2;
+	if (INPUT_DOWN) drag/=2;
 
 	//jumping
-	if (jumping && jump) 
+	if (INPUT_JUMP && jump) 
 	{
 		vsp+=jumpSpeed;
 		jump = false;
 	}
-	if (vsp < 0) && (!up) vsp = max(vsp,jumpSpeed/4);
+	if (vsp < 0) && (!keyboard_check(global.KEY_JUMP)) vsp = max(vsp,jumpSpeed/4);
 
 	//grace
 	if tileMeeting(x,y+vsp+1)||tileMeeting(x,y+vsp+5) coyote = 6; 
@@ -94,5 +94,5 @@ function PlayerState_Free() {
 	}
 
 	//other movements (attacks, dashes, blocks)
-	if (attack) pState = PLAYERSTATE.ATTACK_ONE;
+	if (INPUT_ATTACK) State = PLAYERSTATE.ATTACK_ONE;
 }

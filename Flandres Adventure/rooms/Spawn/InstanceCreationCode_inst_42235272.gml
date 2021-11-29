@@ -1,4 +1,4 @@
 target = Room2;
 destinationX = 64;
-destinationY = 724;
+destinationY = 740;
 alterPosition = true;

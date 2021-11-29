@@ -1,5 +1,5 @@
 
-function room_transition(m, tRoom=Spawn, alterPosition = false, destinationX = 0, destinationY = 0){
+function room_transition(tRoom=Spawn, m=TRANSMODE.OUT, alterPosition = false, destinationX = 0, destinationY= 0){
     with (o_transition)
     {
         mode = m;

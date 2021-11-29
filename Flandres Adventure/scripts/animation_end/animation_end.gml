@@ -1,6 +1,4 @@
 //returns true if the animation will loop this step.
-
-//Script courtesy of PixellatedPope & Minty Python from the GameMaker subreddit discord 
 function animation_end(_sprite = sprite_index, _image = image_index) 
 {
 	var _type=sprite_get_speed_type(sprite_index);

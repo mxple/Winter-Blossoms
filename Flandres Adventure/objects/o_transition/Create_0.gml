@@ -1,9 +1,9 @@
 /// @description Size variables and mode setup
-duration = 40
+duration = 50;
 targetRoom = room;
 color = c_black;
 
-timer = 40;
+timer = 50;
 alpha = 1;
 
 

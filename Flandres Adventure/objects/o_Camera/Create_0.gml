@@ -13,3 +13,8 @@ mountainsLayer = layer_get_id("Mountains");
 backTreesLayer = layer_get_id("BackTrees");
 midTreesLayer = layer_get_id("MidTrees")
 
+//screenshake
+shakeLength = 0;
+shakeStrength = 0;
+shakeRemain = 0;
+shakeBuffer = 32;

@@ -25,7 +25,7 @@ function PlayerState_Attack_One(){
 				ds_list_add(hitByAttack, hitID);
 				with (hitID)
 				{
-					Hit(2);
+					hit(2);
 				}			
 			}
 		}
@@ -36,6 +36,6 @@ function PlayerState_Attack_One(){
 	if (animation_end())
 	{
 		sprite_index = s_playerIdle;
-		pState = PLAYERSTATE.FREE;
+	 o_player.state = PLAYERSTATE.FREE;
 	}
 }
