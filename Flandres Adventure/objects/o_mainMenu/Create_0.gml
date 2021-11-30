@@ -11,9 +11,9 @@ enum MENU_ITEMS {
 	AUDIO,
 	GRAPHICS,
 	CONTROLS,
-	CREDITS,
 	SAVES,
 	LEVELS,
+	CREDITS,
 	QUIT
 }
 
@@ -28,7 +28,7 @@ enum MENU_ELEMENT_TYPE{
 
 //Create menu pages
 ds_main_menu = create_menu_page(
-	["PLAY",		MENU_ELEMENT_TYPE.SCRIPT,	room_transition,		Spawn],
+	["PLAY",		MENU_ELEMENT_TYPE.TRANS,	MENU_ITEMS.SAVES],
 	["SETTINGS",	MENU_ELEMENT_TYPE.TRANS,	MENU_ITEMS.SETTINGS],	
 	["CREDITS",		MENU_ELEMENT_TYPE.SCRIPT,	room_transition,		Credits,[Credits]],
 	["QUIT",		MENU_ELEMENT_TYPE.SCRIPT,	game_end]
@@ -52,8 +52,8 @@ ds_audio = create_menu_page(
 );
 
 ds_graphics = create_menu_page(
-	["Resolution",	MENU_ELEMENT_TYPE.SHIFT,	set_view_size,	1,		["640X360","1280x720","1920x1080","2560X1440"]],
-	["Fullscreen",	MENU_ELEMENT_TYPE.TOGGLE,	window_set_fullscreen,	1,		["FULLSCREEN","WINDOWED"]],
+	["Resolution",	MENU_ELEMENT_TYPE.SHIFT,	set_view_size,			1,		["640X360","1280x720","1920x1080","2560X1440"]],
+	["Fullscreen",	MENU_ELEMENT_TYPE.TOGGLE,	menu_set_fullscreen,	1,		["FULLSCREEN","WINDOWED"]],
 	["Back",		MENU_ELEMENT_TYPE.TRANS,	MENU_ITEMS.SETTINGS]
 );
 

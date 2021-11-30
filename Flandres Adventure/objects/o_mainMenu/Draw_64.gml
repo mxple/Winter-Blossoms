@@ -17,6 +17,7 @@ var xoffset = 0;
 
 //ELSE draw
 if (page != 0) {
+	
 	y_buffer = 32;
 	draw_set_font(menuFontSmall);
 	draw_set_valign(fa_middle);
@@ -43,49 +44,63 @@ for(var yy = 0; yy<ds_height; yy++) {
 			xoffset = (x_buffer);
 		}
 		draw_text_color(ltx-xoffset, lty, ds_grid[# 0 , yy],c,c,c,c,1);
+					//Draw dividing line
+			draw_line_color(start_x, start_y, start_x, lty, $ba8f4f, c_white);
 	}
 }
-
-//Draw dividing line
-draw_line_color(start_x, start_y, start_x, lty, $ba8f4f, c_white);
 
 //Draw Elements on right
 draw_set_halign(fa_left);
 
+//rtx: X start pos
+//rty: Y start pos
 var rtx = start_x + x_buffer, rty;
-for(var yy = 0; yy<ds_height; yy++) {
-	rty = start_y + (yy*y_buffer);
-	switch(ds_grid[#1,yy]){
+
+//looping through ds_grid
+for(var yy = 0; yy<ds_height; yy++) 
+{
+	rty = start_y + (yy*y_buffer); //sets rty based on element number
+	
+	//current_val : initalized as default
+	//current_array : possible values
+	switch(ds_grid[#1,yy])
+	{	
 		case MENU_ELEMENT_TYPE.SHIFT:
 			var current_val = ds_grid[# 3, yy];
 			var current_array = ds_grid[# 4, yy];
 			var left_shift = "<< ";
 			var right_shift = " >>";
+			c = c_white;
 			
-			if(current_val==0) left_shift = "";
+			//removal of << >>
+			if(current_val == 0) left_shift = "";
 			if(current_val == array_length_1d(ds_grid[#4, yy])-1) right_shift="";
 			
-			c = c_white;
-			
-			if(inputting and yy == menu_option[page]) c = $bed373;			
+			//drawing aqua color
+			if(inputting and yy == menu_option[page]) c = $bed373;
 			draw_text_color(rtx, rty, left_shift+current_array[current_val]+right_shift, c,c,c,c, 1);
-			break;
+		break;
+			
 		case MENU_ELEMENT_TYPE.SLIDER:
-			var len = GUI_W/5;
-			var current_val = ds_grid[# 3, yy];
+			var len = GUI_W/4; //slider length
+			var current_val = ds_grid[# 3, yy]; 
 			var current_array = ds_grid[# 4, yy];
+			//circle_pos 
 			var circle_pos = ((current_val - current_array[0]) / (current_array[1] - current_array[0]));
 			c = c_white;
+			
 			draw_line_width_color(rtx, rty, rtx +len, rty, 2,c,c);
 			
 			if(inputting and yy == menu_option[page]) c = $bed373;
 			draw_circle_color(rtx + (circle_pos*len), rty, 4, c,c, false);
 			draw_text_color(rtx + (len * 1.2), rty, string(floor(circle_pos*100))+"%",c,c,c,c,1);
 		break;
+		
 		case MENU_ELEMENT_TYPE.TOGGLE:
 			var current_val = ds_grid[# 3, yy];
 			var c1, c2;
 			c = c_white;
+			
 			if(inputting and yy == menu_option[page]) c = $bed373;
 			if(current_val == 0) { c1 = c; c2 = c_dkgrey; }
 			else				 { c1 = c_dkgrey; c2 = c; }
@@ -93,6 +108,7 @@ for(var yy = 0; yy<ds_height; yy++) {
 			draw_text_color(rtx, rty, "ON", c1,c1,c1,c1,1);
 			draw_text_color(rtx+32, rty, "OFF", c2,c2,c2,c2,1);
 		break;
+		
 		case MENU_ELEMENT_TYPE.INPUT:
 			var current_val = ds_grid[# 3, yy];
 			var string_val;

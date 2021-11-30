@@ -41,6 +41,7 @@
     {"id":{"name":"save_game","path":"scripts/save_game/save_game.yy",},"order":3,},
     {"id":{"name":"animation_end","path":"scripts/animation_end/animation_end.yy",},"order":5,},
     {"id":{"name":"menuFontSmall","path":"fonts/menuFontSmall/menuFontSmall.yy",},"order":1,},
+    {"id":{"name":"menu_set_fullscreen","path":"scripts/menu_set_fullscreen/menu_set_fullscreen.yy",},"order":6,},
     {"id":{"name":"s_parallaxBackTrees","path":"sprites/s_parallaxBackTrees/s_parallaxBackTrees.yy",},"order":0,},
     {"id":{"name":"s_transTriggerBox","path":"sprites/s_transTriggerBox/s_transTriggerBox.yy",},"order":16,},
     {"id":{"name":"t_wall1","path":"tilesets/t_wall1/t_wall1.yy",},"order":0,},
@@ -99,7 +100,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.6.595",
+    "IDEVersion": "2.3.3.574",
   },
   "resourceVersion": "1.4",
   "name": "Flandres Adventure",
