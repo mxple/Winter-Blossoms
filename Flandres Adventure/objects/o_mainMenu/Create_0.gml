@@ -53,7 +53,11 @@ ds_audio = create_menu_page(
 
 ds_graphics = create_menu_page(
 	["Resolution",	MENU_ELEMENT_TYPE.SHIFT,	set_view_size,			1,		["640X360","1280x720","1920x1080","2560X1440"]],
+<<<<<<< Updated upstream
 	["Fullscreen",	MENU_ELEMENT_TYPE.TOGGLE,	menu_set_fullscreen,	1,		["FULLSCREEN","WINDOWED"]],
+=======
+	["Fullscreen",	MENU_ELEMENT_TYPE.TOGGLE,	window_set_fullscreen,	0,		["WINDOWED","FULLSCREEN"]],
+>>>>>>> Stashed changes
 	["Back",		MENU_ELEMENT_TYPE.TRANS,	MENU_ITEMS.SETTINGS]
 );
 

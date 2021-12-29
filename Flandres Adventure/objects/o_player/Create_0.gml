@@ -18,7 +18,7 @@ vsp = 0;
 hspRemaining=0;
 vspRemaining=0;
 state = PLAYERSTATE.LOCKED;
-
+wasInAir = false;
 
 
 //other

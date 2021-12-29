@@ -62,15 +62,19 @@ if(INPUT_ENTER || INPUT_ATTACK) {
 		break;
 		case MENU_ELEMENT_TYPE.SHIFT:
 			inputting = !inputting;
+<<<<<<< Updated upstream
 			if !(inputting) script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+=======
+			if !(inputting) script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 3, menu_option[page]]);
+>>>>>>> Stashed changes
 		break;
 		case MENU_ELEMENT_TYPE.SLIDER:
 			inputting = !inputting;
-			if (inputting) script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 3, menu_option[page]]);
+			if !(inputting) script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 3, menu_option[page]]);
 		break;
 		case MENU_ELEMENT_TYPE.TOGGLE: 
 			inputting = !inputting;
-			if (inputting) script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 3, menu_option[page]]);
+			if !(inputting) script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 3, menu_option[page]]);
 		break;
 		case MENU_ELEMENT_TYPE.INPUT:
 			inputting = !inputting;

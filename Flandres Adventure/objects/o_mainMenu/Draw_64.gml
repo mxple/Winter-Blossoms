@@ -105,8 +105,8 @@ for(var yy = 0; yy<ds_height; yy++)
 			if(current_val == 0) { c1 = c; c2 = c_dkgrey; }
 			else				 { c1 = c_dkgrey; c2 = c; }
 			
-			draw_text_color(rtx, rty, "ON", c1,c1,c1,c1,1);
-			draw_text_color(rtx+32, rty, "OFF", c2,c2,c2,c2,1);
+			draw_text_color(rtx, rty, "OFF", c1,c1,c1,c1,1);
+			draw_text_color(rtx+32, rty, "ON", c2,c2,c2,c2,1);
 		break;
 		
 		case MENU_ELEMENT_TYPE.INPUT:
