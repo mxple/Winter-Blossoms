@@ -15,7 +15,7 @@ if (inputting) {
 			if !(hinput == 0){
 				audio_play_sound(sfxMenuScroll,1,false);
 				ds_grid[# 3, menu_option[page]] += hinput;
-				ds_grid[# 3, menu_option[page]] = clamp(ds_grid[# 3, menu_option[page]], 0, 3); //warning, 2 arbit num
+				ds_grid[# 3, menu_option[page]] = clamp(ds_grid[# 3, menu_option[page]], 0, array_length(ds_grid[# 4, menu_option[page]])-1);
 			}
 		break;
 		case MENU_ELEMENT_TYPE.SLIDER:
@@ -38,6 +38,10 @@ if (inputting) {
 			if !within(lastKey,invalidKeys) {
 				ds_grid[# 3, menu_option[page]] = lastKey;
 				variable_global_set(ds_grid[# 2, menu_option[page]], lastKey);
+				//saving controls to file
+				ini_open("controls.ini");
+				ini_write_real("movement", ds_grid[# 2, menu_option[page]], lastKey);	
+				ini_close();			
 			}
 			break;
 		}					
@@ -62,11 +66,10 @@ if(INPUT_ENTER || INPUT_ATTACK) {
 		break;
 		case MENU_ELEMENT_TYPE.SHIFT:
 			inputting = !inputting;
-<<<<<<< Updated upstream
-			if !(inputting) script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
-=======
+			//if !(inputting) script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
+
 			if !(inputting) script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 3, menu_option[page]]);
->>>>>>> Stashed changes
+
 		break;
 		case MENU_ELEMENT_TYPE.SLIDER:
 			inputting = !inputting;
@@ -82,4 +85,8 @@ if(INPUT_ENTER || INPUT_ATTACK) {
 			
 	}
 	audio_play_sound(sfxMenuClick, 1, false);
+}
+
+if(INPUT_BACK) and (page != MENU_ITEMS.MAIN) {
+	page = ds_grid[# 2, ds_height-1];
 }

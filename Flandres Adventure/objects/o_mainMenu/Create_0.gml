@@ -1,17 +1,15 @@
 /// @description menu items
-global.PAUSE = true;
-
 display_set_gui_size(VIEW_W, VIEW_H);
 
 invalidKeys = [vk_enter, vk_escape, vk_backspace, vk_control, vk_alt, vk_lcontrol, vk_lalt];
 
 enum MENU_ITEMS {
 	MAIN,
+	SAVES,
 	SETTINGS,
 	AUDIO,
 	GRAPHICS,
 	CONTROLS,
-	SAVES,
 	LEVELS,
 	CREDITS,
 	QUIT
@@ -30,12 +28,12 @@ enum MENU_ELEMENT_TYPE{
 ds_main_menu = create_menu_page(
 	["PLAY",		MENU_ELEMENT_TYPE.TRANS,	MENU_ITEMS.SAVES],
 	["SETTINGS",	MENU_ELEMENT_TYPE.TRANS,	MENU_ITEMS.SETTINGS],	
-	["CREDITS",		MENU_ELEMENT_TYPE.SCRIPT,	room_transition,		Credits,[Credits]],
+	["CREDITS",		MENU_ELEMENT_TYPE.SCRIPT,	room_goto,		Credits,[Credits]],
 	["QUIT",		MENU_ELEMENT_TYPE.SCRIPT,	game_end]
 );
 
 ds_saves = create_menu_page(
-	["SAVES",		MENU_ELEMENT_TYPE.SHIFT,	load_save,				0,		["PROFILE 1","PROFILE 2","PROFILE 3"]],
+	["SAVES",		MENU_ELEMENT_TYPE.SHIFT,	load_data,				0,		["PROFILE 1","PROFILE 2","PROFILE 3"]],
 	["Back",		MENU_ELEMENT_TYPE.TRANS,	MENU_ITEMS.MAIN]
 );
 
@@ -53,11 +51,7 @@ ds_audio = create_menu_page(
 
 ds_graphics = create_menu_page(
 	["Resolution",	MENU_ELEMENT_TYPE.SHIFT,	set_view_size,			1,		["640X360","1280x720","1920x1080","2560X1440"]],
-<<<<<<< Updated upstream
-	["Fullscreen",	MENU_ELEMENT_TYPE.TOGGLE,	menu_set_fullscreen,	1,		["FULLSCREEN","WINDOWED"]],
-=======
 	["Fullscreen",	MENU_ELEMENT_TYPE.TOGGLE,	window_set_fullscreen,	0,		["WINDOWED","FULLSCREEN"]],
->>>>>>> Stashed changes
 	["Back",		MENU_ELEMENT_TYPE.TRANS,	MENU_ITEMS.SETTINGS]
 );
 
@@ -73,11 +67,11 @@ ds_controls = create_menu_page(
 );
 
 page = 0;
-menu_pages = [ds_main_menu, ds_settings, ds_audio, ds_graphics, ds_controls, ds_saves];
+menu_pages = [ds_main_menu, ds_saves, ds_settings, ds_audio, ds_graphics, ds_controls];
 
 var i = 0, array_len = array_length_1d(menu_pages);
 repeat(array_len) {
-	menu_option[i]  = 0;
+	menu_option[i] = 0;
 	i++;
 }
 inputting = false;

@@ -9,6 +9,7 @@ if mode != TRANSMODE.OFF {
 		if (timer >= duration) {
 			room_goto(targetRoom);
 			mode = TRANSMODE.IN;
+			save_data();
 		}
 	}
 	alpha = timer/duration;	

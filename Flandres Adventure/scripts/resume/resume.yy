@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Menu scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "load_save",
+  "name": "resume",
   "tags": [],
   "resourceType": "GMScript",
 }

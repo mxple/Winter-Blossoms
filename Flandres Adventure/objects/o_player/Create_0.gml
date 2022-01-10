@@ -4,8 +4,8 @@ walkSpeed = 4;
 grav = 1;
 jumpSpeed = -15;
 dragcoef = 10;
-accel = 0.6;
-deccel = 0.3;
+accel = 0.7;
+deccel = 0.5;
 fric = 0.95;
 coyote=15;
 //variables

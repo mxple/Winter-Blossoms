@@ -16,27 +16,40 @@ ltx = start_x + x_buffer;
 var xoffset = 0;
 
 //ELSE draw
-if (page != 0) {
-	
+if (page != 0 and page != 2) {
 	y_buffer = 32;
 	draw_set_font(menuFontSmall);
 	draw_set_valign(fa_middle);
 	draw_set_halign(fa_right);
 	var start_y = (GUI_H/2)-(((ds_height-1)/2) * y_buffer), start_x = GUI_W/2,
 	ltx = start_x - x_buffer; 
+} 
+if (page == 2) {
+	draw_set_font(menuFont);
+	draw_set_halign(fa_middle);
+	y_buffer = 64;
+	start_y = GUI_H/5;
+	start_x = GUI_W/2;
 }
+
 //Draw elements on left
 for(var yy = 0; yy<ds_height; yy++) {
 	lty = start_y + (yy*y_buffer);
 	c = c_white;
 	xoffset = 0;
-	if (page = 0) {
+	if (page == 0) {
 		if (yy == menu_option[page]) {
-			draw_sprite(s_menuSelectButton,0,ltx,lty+22); //arbit number for snowflake offset
 			c = $ba8f4f;
-			xoffset = (x_buffer);
+			draw_text_color(ltx+xoffset, lty, "> ",c,c,c,c,1);
+			xoffset = 32; //adjust as needed
 		}
 		draw_text_color(ltx+xoffset, lty, ds_grid[# 0 , yy],c,c,c,c,1);
+	} else if (page == 2) {
+		if (yy == menu_option[page]) {
+			c = $ba8f4f;
+			draw_text_color(start_x, lty, ">>  " + ds_grid[# 0 , yy] + "  <<",c,c,c,c,1); //arbit number for snowflake offset
+		}
+		draw_text_color(start_x, lty, ds_grid[# 0 , yy],c,c,c,c,1);
 	} else {
 		if (yy == menu_option[page]) {
 			draw_sprite(s_menuSelectButton,0,ltx,lty-3); //arbit number for snowflake offset
@@ -79,6 +92,12 @@ for(var yy = 0; yy<ds_height; yy++)
 			//drawing aqua color
 			if(inputting and yy == menu_option[page]) c = $bed373;
 			draw_text_color(rtx, rty, left_shift+current_array[current_val]+right_shift, c,c,c,c, 1);
+			
+			//PROFILES
+			draw_set_font(menuFontSaves);
+			draw_text_color(rtx+12, rty+48, get_data(current_array[current_val]), c,c,c,c, 1);
+			draw_set_font(menuFontSmall);
+			
 		break;
 			
 		case MENU_ELEMENT_TYPE.SLIDER:

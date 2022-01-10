@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Menu scripts",
-    "path": "folders/Scripts/Menu scripts.yy",
+    "name": "Scripts",
+    "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "save_game",
+  "name": "load_controls",
   "tags": [],
   "resourceType": "GMScript",
 }
