@@ -24,6 +24,9 @@ if (inputting) {
 				ds_grid[# 3, menu_option[page]] += hinput*0.01;
 				ds_grid[# 3, menu_option[page]] = clamp(ds_grid[# 3, menu_option[page]], 0, 1);
 			}
+			ini_open("settings.ini");
+			ini_write_real("settings", "volume", ds_grid[# 3, menu_option[page]]);	
+			ini_close();
 		break;
 		case MENU_ELEMENT_TYPE.TOGGLE: 
 			var hinput = input_right-input_left;
@@ -39,9 +42,10 @@ if (inputting) {
 				ds_grid[# 3, menu_option[page]] = lastKey;
 				variable_global_set(ds_grid[# 2, menu_option[page]], lastKey);
 				//saving controls to file
-				ini_open("controls.ini");
+				ini_open("settings.ini");
 				ini_write_real("movement", ds_grid[# 2, menu_option[page]], lastKey);	
-				ini_close();			
+				ini_close();
+				inputting = !inputting;
 			}
 			break;
 		}					
@@ -88,5 +92,6 @@ if(INPUT_ENTER || INPUT_ATTACK) {
 }
 
 if(INPUT_BACK) and (page != MENU_ITEMS.MAIN) {
+	inputting = false;
 	page = ds_grid[# 2, ds_height-1];
 }

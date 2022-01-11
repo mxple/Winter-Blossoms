@@ -19,6 +19,10 @@ enum PMENU_ITEMS {
 
 invalidKeys = [vk_enter, vk_escape, vk_backspace, vk_control, vk_alt, vk_lcontrol, vk_lalt];
 
+ini_open("settings.ini");
+var volume = ini_read_real("settings","volume",1);
+var resolution = ini_read_real("settings","resolution",1);
+
 //MENU
 ds_pause_menu = create_menu_page(
 	["RESUME",			MENU_ELEMENT_TYPE.SCRIPT,	resume],
@@ -35,27 +39,27 @@ ds_settings = create_menu_page(
 );
 
 ds_audio = create_menu_page(
-	["Master",		MENU_ELEMENT_TYPE.SLIDER,	audio_master_gain,		1,		[0,1]],
+	["Master",		MENU_ELEMENT_TYPE.SLIDER,	audio_master_gain,		volume,		[0,1]],
 	["Back",		MENU_ELEMENT_TYPE.TRANS,	PMENU_ITEMS.SETTINGS]
 );
 
 ds_graphics = create_menu_page(
-	["Resolution",	MENU_ELEMENT_TYPE.SHIFT,	set_view_size,			1,		["640X360","1280x720","1920x1080","2560X1440"]],
-	["Fullscreen",	MENU_ELEMENT_TYPE.TOGGLE,	window_set_fullscreen,	0,		["WINDOWED","FULLSCREEN"]],
+	["Resolution",	MENU_ELEMENT_TYPE.SHIFT,	set_view_size,			resolution,		["640X360","1280x720","1920x1080","2560X1440"]],
+	["Fullscreen",	MENU_ELEMENT_TYPE.TOGGLE,	window_set_fullscreen,	window_get_fullscreen(),		["WINDOWED","FULLSCREEN"]],
 	["Back",		MENU_ELEMENT_TYPE.TRANS,	PMENU_ITEMS.SETTINGS]
 );
 
 ds_controls = create_menu_page(
-	["Up",			MENU_ELEMENT_TYPE.INPUT,	"KEY_UP",				vk_up],
-	["Down",		MENU_ELEMENT_TYPE.INPUT,	"KEY_DOWN",				vk_down],
-	["Left",		MENU_ELEMENT_TYPE.INPUT,	"KEY_LEFT",				vk_left],
-	["Right",		MENU_ELEMENT_TYPE.INPUT,	"KEY_RIGHT",			vk_right],
-	["Attack",		MENU_ELEMENT_TYPE.INPUT,	"KEY_ATTACK",			ord("Z")],
-	["Jump",		MENU_ELEMENT_TYPE.INPUT,	"KEY_JUMP",				ord("C")],
-	["Special",		MENU_ELEMENT_TYPE.INPUT,	"KEY_SPECIAL",			ord("X")],
+	["Up",			MENU_ELEMENT_TYPE.INPUT,	"KEY_UP",				ini_read_real("movement", "KEY_UP", vk_up)],
+	["Down",		MENU_ELEMENT_TYPE.INPUT,	"KEY_DOWN",				ini_read_real("movement", "KEY_DOWN", vk_down)],
+	["Left",		MENU_ELEMENT_TYPE.INPUT,	"KEY_LEFT",				ini_read_real("movement", "KEY_LEFT", vk_left)],
+	["Right",		MENU_ELEMENT_TYPE.INPUT,	"KEY_RIGHT",			ini_read_real("movement", "KEY_RIGHT", vk_right)],
+	["Attack",		MENU_ELEMENT_TYPE.INPUT,	"KEY_ATTACK",			ini_read_real("movement", "KEY_ATTACK", 90)],
+	["Jump",		MENU_ELEMENT_TYPE.INPUT,	"KEY_JUMP",				ini_read_real("movement", "KEY_JUMP", 88)],
+	["Special",		MENU_ELEMENT_TYPE.INPUT,	"KEY_SPECIAL",			ini_read_real("movement", "KEY_SPECIAL", 67)],
 	["Back",		MENU_ELEMENT_TYPE.TRANS,	PMENU_ITEMS.SETTINGS]
 );
-
+ini_close();
 page = 0;
 menu_pages = [ds_pause_menu, ds_settings, ds_audio, ds_graphics, ds_controls];
 

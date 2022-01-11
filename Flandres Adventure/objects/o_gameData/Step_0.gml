@@ -7,3 +7,4 @@ if (room != Menu and room != Credits) {
 		frames = 1;
 	}
 }
+pRoom = room;

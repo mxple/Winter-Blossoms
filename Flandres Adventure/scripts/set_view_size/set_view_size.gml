@@ -15,4 +15,8 @@ function set_view_size(size){
 			window_set_size(2560, 1440);
 		break;
 	}
+	ini_open("settings.ini");
+	ini_write_real("settings","resolution",size);
+	ini_close();
+	instance_create_layer(0,0,"Instances_1",o_centerWindow);
 }

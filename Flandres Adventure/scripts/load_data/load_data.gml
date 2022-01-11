@@ -31,4 +31,5 @@ function load_data(profile){
 		self.bYeti = data.yeti;
 	}
 	room_goto(o_gameData.pRoom);
+	instance_create_layer(0,0,"Instances_1",o_pauseMenu);
 }

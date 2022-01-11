@@ -4,4 +4,5 @@ function save_and_quit(){
 	save_data();
 	instance_destroy(o_gameData);
 	room_goto(Menu);
+	instance_destroy(o_pauseMenu);
 }

@@ -28,7 +28,7 @@ if (page == 2) {
 	draw_set_font(menuFont);
 	draw_set_halign(fa_middle);
 	y_buffer = 64;
-	start_y = GUI_H/5;
+	start_y = GUI_H/10;
 	start_x = GUI_W/2;
 }
 
@@ -57,8 +57,8 @@ for(var yy = 0; yy<ds_height; yy++) {
 			xoffset = (x_buffer);
 		}
 		draw_text_color(ltx-xoffset, lty, ds_grid[# 0 , yy],c,c,c,c,1);
-					//Draw dividing line
-			draw_line_color(start_x, start_y, start_x, lty, $ba8f4f, c_white);
+		//Draw dividing line
+		draw_line_color(start_x, start_y-32, start_x, lty+32, c_white, c_white);
 	}
 }
 
