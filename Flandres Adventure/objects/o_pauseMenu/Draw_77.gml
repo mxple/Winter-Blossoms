@@ -1,5 +1,5 @@
 /// @description Drawing background 
-if (pause) {
+if (global.pause) {
 	if !(surface_exists(pause_surf)) {
 		pause_surf = surface_create(w,h);
 		buffer_set_surface(surf_buffer, pause_surf, 0);

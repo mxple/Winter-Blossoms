@@ -11,3 +11,4 @@ function hit(damage){
 		state = ENEMYSTATE.DEAD;
 	}
 }
+

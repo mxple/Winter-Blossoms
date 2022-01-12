@@ -5,4 +5,5 @@ function save_and_quit(){
 	instance_destroy(o_gameData);
 	room_goto(Menu);
 	instance_destroy(o_pauseMenu);
+	global.pause=false;
 }

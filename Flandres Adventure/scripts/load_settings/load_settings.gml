@@ -6,9 +6,9 @@ function load_settings() {
 	global.KEY_RIGHT =	ini_read_real("movement",	"KEY_RIGHT",	vk_right);
 	global.KEY_UP =		ini_read_real("movement",	"KEY_UP",		vk_up);
 	global.KEY_DOWN =	ini_read_real("movement",	"KEY_DOWN",		vk_down);
-	global.KEY_JUMP =	ini_read_real("movement",	"KEY_JUMP",		ord("c"));
-	global.KEY_ATTACK = ini_read_real("movement",	"KEY_ATTACK",	ord("x"));
-	global.KEY_SPECIAL= ini_read_real("movement",	"KEY_SPECIAL",	ord("z"));
+	global.KEY_JUMP =	ini_read_real("movement",	"KEY_JUMP",		ord("C"));
+	global.KEY_ATTACK = ini_read_real("movement",	"KEY_ATTACK",	ord("Z"));
+	global.KEY_SPECIAL= ini_read_real("movement",	"KEY_SPECIAL",	ord("X"));
 	set_view_size(ini_read_real("settings","resolution",1));
 	ini_close();
 }

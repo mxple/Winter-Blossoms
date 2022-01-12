@@ -2,7 +2,7 @@
 draw_set_valign(fa_top);
 draw_set_halign(fa_middle);
 draw_set_font(menuFontSmall);
-yb = 32;
+yb = 28;
 alpha+=0.01;
 draw_text_transformed_color(GUI_W/2, yb, "CREATOR",2,2,0,c,c,c,c,alpha);
 draw_text_transformed_color(GUI_W/2, yb, "\nEric Li",1.7,1.7,0,c,c,c,c,alpha-0.1);

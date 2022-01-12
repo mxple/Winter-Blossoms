@@ -1,4 +1,4 @@
 
 function resume() {
-	o_pauseMenu.pause = false;
+	o_pauseMenu.global.pause = false;
 }

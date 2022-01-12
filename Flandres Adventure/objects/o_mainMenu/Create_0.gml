@@ -64,9 +64,9 @@ ds_controls = create_menu_page(
 	["Down",		MENU_ELEMENT_TYPE.INPUT,	"KEY_DOWN",				ini_read_real("movement", "KEY_DOWN", vk_down)],
 	["Left",		MENU_ELEMENT_TYPE.INPUT,	"KEY_LEFT",				ini_read_real("movement", "KEY_LEFT", vk_left)],
 	["Right",		MENU_ELEMENT_TYPE.INPUT,	"KEY_RIGHT",			ini_read_real("movement", "KEY_RIGHT", vk_right)],
-	["Attack",		MENU_ELEMENT_TYPE.INPUT,	"KEY_ATTACK",			ini_read_real("movement", "KEY_ATTACK", 90)],
-	["Jump",		MENU_ELEMENT_TYPE.INPUT,	"KEY_JUMP",				ini_read_real("movement", "KEY_JUMP", 88)],
-	["Special",		MENU_ELEMENT_TYPE.INPUT,	"KEY_SPECIAL",			ini_read_real("movement", "KEY_SPECIAL", 67)],
+	["Attack",		MENU_ELEMENT_TYPE.INPUT,	"KEY_ATTACK",			ini_read_real("movement", "KEY_ATTACK", ord("Z"))],
+	["Jump",		MENU_ELEMENT_TYPE.INPUT,	"KEY_JUMP",				ini_read_real("movement", "KEY_JUMP", ord("C"))],
+	["Special",		MENU_ELEMENT_TYPE.INPUT,	"KEY_SPECIAL",			ini_read_real("movement", "KEY_SPECIAL", ord("X"))],
 	["Back",		MENU_ELEMENT_TYPE.TRANS,	MENU_ITEMS.SETTINGS]
 );
 ini_close();

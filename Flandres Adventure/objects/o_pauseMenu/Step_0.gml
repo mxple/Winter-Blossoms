@@ -1,7 +1,7 @@
 /// @description pausing
 if (keyboard_check_pressed(vk_escape)) {
-	pause = !pause;
-	if pause {
+	global.pause = !global.pause;
+	if global.pause {
 		application_surface_draw_enable(false);
 	
 		w = surface_get_width(application_surface);
@@ -19,7 +19,7 @@ if (keyboard_check_pressed(vk_escape)) {
 		audio_pause_all();
 	} 
 }
-if pause {
+if global.pause {
 	#region MENU
 		
 	input_down = keyboard_check_pressed(global.KEY_DOWN);

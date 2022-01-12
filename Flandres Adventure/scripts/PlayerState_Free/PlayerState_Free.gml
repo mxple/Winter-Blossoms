@@ -3,15 +3,11 @@ function PlayerState_Free() {
 	hmove = INPUT_RIGHT-INPUT_LEFT;
 	if hmove != 0 
 	{
-		if !audio_is_playing(sfxrunning) && (tileMeeting(x, y+vsp)){
-			audio_play_sound(sfxrunning, 10, true);
-		}
 		hsp += accel*hmove;
 		hsp = clamp (hsp, -walkSpeed, walkSpeed);
 	}
 	else 
 	{
-		audio_stop_sound(sfxrunning)
 		hsp = lerp(hsp, 0, deccel);
 	}
 
@@ -65,7 +61,7 @@ function PlayerState_Free() {
 	//vertical collision
 	if (tileMeeting(x, y+vsp))
 	{
-		if wasInAir audio_play_sound(sfxrun3,10,false);
+		//if wasInAir audio_play_sound(sfxrun3,10,false);
 		while (!tileMeeting(x,y+sign(vsp)))
 		{
 			y += sign(vsp);
@@ -74,7 +70,6 @@ function PlayerState_Free() {
 		vsp = 0;
 	} else {
 		wasInAir = true;
-		audio_stop_sound(sfxrunning);
 	}
 	//moving but without decimal jitter yay
 	hspRemaining += hsp;

@@ -11,6 +11,6 @@ if mode != TRANSMODE.OFF {
 			mode = TRANSMODE.IN;
 			save_data();
 		}
-	}
+	}	
 	alpha = timer/duration;	
 }
