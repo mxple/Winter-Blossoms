@@ -8,3 +8,4 @@ if (room != Menu and room != Credits) {
 	}
 }
 pRoom = room;
+pHealth = health;

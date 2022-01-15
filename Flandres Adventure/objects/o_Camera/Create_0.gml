@@ -7,14 +7,14 @@ xTo = xstart;
 yTo = ystart;
 
 //parallax layers
-skyLayer = layer_get_id("Sky");
-cloudsLayer = layer_get_id("Clouds");
-mountainsLayer = layer_get_id("Mountains");
-backTreesLayer = layer_get_id("BackTrees");
-midTreesLayer = layer_get_id("MidTrees")
+bglayer1 = layer_get_id("bg1");
+bglayer2 = layer_get_id("bg2");
+bglayer3 = layer_get_id("bg3");
+bglayer4 = layer_get_id("bg4");
+bglayer5 = layer_get_id("bg5");
 
 //screenshake
 shakeLength = 0;
 shakeStrength = 0;
 shakeRemain = 0;
-shakeBuffer = 32;
+shakeBuffer = 8;

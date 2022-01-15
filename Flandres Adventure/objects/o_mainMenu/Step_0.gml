@@ -71,7 +71,6 @@ if(INPUT_ENTER || INPUT_ATTACK) {
 		case MENU_ELEMENT_TYPE.SHIFT:
 			inputting = !inputting;
 			//if !(inputting) script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 4, menu_option[page]]);
-
 			if !(inputting) script_execute(ds_grid[# 2, menu_option[page]], ds_grid[# 3, menu_option[page]]);
 
 		break;

@@ -16,8 +16,14 @@ if (keyboard_check_pressed(vk_escape)) {
 	
 		instance_deactivate_all(true);
 		instance_activate_object(o_gameData);
+		instance_activate_object(o_snowParticles);
 		audio_pause_all();
-	} 
+		part_system_automatic_update(global.particles_main_system,false);
+		if variable_global_exists("particles_snow_system") part_system_automatic_update(global.particles_snow_system,false);
+	} else {
+		part_system_automatic_update(global.particles_main_system,true);
+		if variable_global_exists("particles_snow_system") part_system_automatic_update(global.particles_snow_system,true);
+	}
 }
 if global.pause {
 	#region MENU

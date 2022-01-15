@@ -2,7 +2,7 @@
 if mode != TRANSMODE.OFF {
 	if mode == TRANSMODE.IN {
 		timer--;
-		if (timer <= 14 and instance_exists(o_player)) o_player.state = PLAYERSTATE.FREE;
+		if (timer <= 14 and instance_exists(o_player)) o_player.state = PLAYERSTATE.IDLE;
 		if (timer <= 0) mode = TRANSMODE.OFF;
 	} else {
 		timer ++;

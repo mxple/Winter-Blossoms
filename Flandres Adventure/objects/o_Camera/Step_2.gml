@@ -8,42 +8,41 @@ if (instance_exists(follow)) {
 }
 
 //Update camera position
-x += (xTo - x) / 10;
-y += (yTo - y) / 10;
+x += (xTo - x) / 16;
+y += (yTo - y) / 16;
 
-x = clamp(x,view_w_half,room_width-view_w_half);
-y = clamp(y,view_h_half,room_height-view_h_half);
+x = clamp(x,view_w_half+shakeBuffer,room_width-view_w_half-shakeBuffer);
+y = clamp(y,view_h_half+shakeBuffer,room_height-view_h_half-shakeBuffer);
 
 
 //Parallax Background
 //DO NOT TOUCH SKY LAYER IT IS PERFECT 
-if (layer_exists(skyLayer))			
+if (layer_exists(bglayer1))			
 {
-	layer_x(skyLayer,x);
-	layer_y(skyLayer,y-180);
+	layer_x(bglayer1,x);
+	layer_y(bglayer1,y-180);
 }
 //ok everything below is editable for depth and stuff
-var _ypos = VIEW_Y/(room_height-VIEW_H);
-var _camsize = VIEW_H;	
-if (layer_exists(cloudsLayer)) 
+var _ypos = VIEW_Y/(room_height-VIEW_H);	
+if (layer_exists(bglayer2)) 
 {
-	layer_x(cloudsLayer,x/2);
-	layer_y(cloudsLayer,lerp(room_height*0.04,(room_height-_camsize),_ypos));
+	layer_x(bglayer2,x/2);
+	layer_y(bglayer2,lerp(room_height*0.04,(room_height-VIEW_H),_ypos));
 }
-if (layer_exists(mountainsLayer)) 
+if (layer_exists(bglayer3)) 
 {
-	layer_x(mountainsLayer,x/2.8);
-	layer_y(mountainsLayer,lerp(room_height*0.06,1*(room_height-_camsize),_ypos));
+	layer_x(bglayer3,x/2.8);
+	layer_y(bglayer3,lerp(room_height*0.06,1*(room_height-VIEW_H),_ypos));
 }
-if (layer_exists(backTreesLayer))
+if (layer_exists(bglayer4))
 {
-	layer_x(backTreesLayer,x/3.4);
-	layer_y(backTreesLayer,lerp(room_height*0.12,1*(room_height-_camsize),_ypos));
+	layer_x(bglayer4,x/3.4);
+	layer_y(bglayer4,lerp(room_height*0.12,1*(room_height-VIEW_H),_ypos));
 }
-if (layer_exists(midTreesLayer)) 
+if (layer_exists(bglayer5)) 
 {
-	layer_x(midTreesLayer,x/6);
-	layer_y(midTreesLayer,lerp(room_height*0.3,1*(room_height-_camsize),_ypos));
+	layer_x(bglayer5,x/6);
+	layer_y(bglayer5,lerp(room_height*0.3,1*(room_height-VIEW_H),_ypos));
 }
 
 //shakes

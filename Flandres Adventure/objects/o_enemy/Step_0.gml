@@ -1,64 +1,17 @@
-/// @description Player Movement
-//variables
+facingRight = (hsp>0);
+facingDown = (vsp>0);
 
-if (hsp>0) facing = "right"; else facing = "left";
-if (vsp>0) facing = "down"; else facing = "up";
-
-//gravity
-if vsp>0 
+if (hsp>0) dir = 1;
+else if (hsp<0) dir = -1;
+if knockback dir *= -1
+switch (state)
 {
-	vsp += grav-drag;
-	drag = vsp/dragcoef;
-} 
-else 
-{
-	vsp += grav;
-}
+	case ENEMYSTATE.IDLE: EnemyState_Idle(); break;
+	case ENEMYSTATE.HUNT: EnemyState_Hunt(); break;
+	case ENEMYSTATE.JUMP: EnemyState_Jump(); break;
+	case ENEMYSTATE.ATTACK: EnemyState_Attack(); break;
+	case ENEMYSTATE.HIT: EnemyState_Hit(); break;
+	case ENEMYSTATE.SPECIAL: EnemyState_Special(); break;
+	case ENEMYSTATE.DEAD: EnemyState_Dead(); break;
 
-
-//horizontal collision
-if (tileMeeting(x+hsp, y))
-{
-	while (!tileMeeting(x+sign(hsp),y))
-	{
-		x += sign(hsp);
-			wallJump = true;
-	}
-	hsp = 0;
-}
-
-//vertical collision
-if (tileMeeting(x, y+vsp))
-{
-		while (!tileMeeting(x,y+sign(vsp)))
-		{
-			y += sign(vsp);
-		}
-	vsp = 0;
-}
-
-//moving but without decimal jitter yay
-hspRemaining += hsp;
-repeat(abs(hspRemaining)) {
-	hspRemaining = approach(hspRemaining, 0, 1);
-	var _xdir = sign(hsp);
-	if (tileMeeting(x + _xdir, y))
-	{
-		hsp = 0;
-		hspRemaining = 0;
-		break;
-	}     
-  x += _xdir;
-}
-vspRemaining += vsp;
-repeat(abs(vspRemaining)) {
-	vspRemaining = approach(vspRemaining, 0, 1);
-	var _ydir = sign(vsp);
-	if (tileMeeting(x, y + _ydir))
-	{
-		vsp = 0;
-		vspRemaining = 0;
-		break;
-	}     
-  y += _ydir;
 }

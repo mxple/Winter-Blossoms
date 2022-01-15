@@ -26,5 +26,4 @@ function save_data(){
 	
 	var json = json_stringify(data);
 	save_string(json, "profile" + string(o_gameData.profile)+".json");
-	
 }

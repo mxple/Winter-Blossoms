@@ -7,29 +7,32 @@ function load_data(profile){
 		instance_create_layer(0,0,"Instances_1",o_gameData);
 		o_gameData.profile = profile;
 		room_goto(Spawn);
+		health = o_gameData.pHealth;
 		save_data();
+		instance_create_layer(0,0,"Instances_1",o_pauseMenu);
 		return;
 	}
 	//Load JSON
 	var json = load_string(filename);
 	var data = json_parse(json);
 	data = data[0];
-	show_debug_message(data)
 	//set game data
 	with(instance_create_layer(0,0,"Instances_1",o_gameData)) {
 		self.profile = data.profile;
 		time = data.time;
-		self.pName = data.name;
-		self.pHealth = data.health;
-		self.pRoom = data.room;
-		self.pInventory = data.inventory;
-		self.pEquipped = data.equipped;
-		self.pGold = data.gold;
-		self.lKnife = data.knife;
-		self.lWaki = data.waki;
-		self.lKatana = data.katana;
-		self.bYeti = data.yeti;
+		pName = data.name;
+		pHealth = data.health;
+		pRoom = data.room;
+		pInventory = data.inventory;
+		pEquipped = data.equipped;
+		pGold = data.gold;
+		lKnife = data.knife;
+		lWaki = data.waki;
+		lKatana = data.katana;
+		bYeti = data.yeti;
 	}
 	room_goto(o_gameData.pRoom);
+	health = o_gameData.pHealth;
+	global.gold = o_gameData.pGold;
 	instance_create_layer(0,0,"Instances_1",o_pauseMenu);
 }

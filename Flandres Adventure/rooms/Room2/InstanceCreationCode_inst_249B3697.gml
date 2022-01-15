@@ -1,4 +1,4 @@
 target = Spawn;
 destinationX = 1984;
-destinationY = 724;
+destinationY = 600;
 alterPosition = true;

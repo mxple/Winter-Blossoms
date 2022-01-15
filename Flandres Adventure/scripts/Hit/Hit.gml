@@ -1,7 +1,8 @@
 
 function hit(damage){
 	hp -= damage;
-	flash = true;
+	damageTaken = damage;
+	knockback = true;
 	if (hp > 0)
 	{
 		state = ENEMYSTATE.HIT;

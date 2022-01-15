@@ -93,8 +93,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "parallaxBackground",
-    "path": "folders/Sprites/parallaxBackground.yy",
+    "name": "vaporwaveBackground",
+    "path": "folders/Sprites/vaporwaveBackground.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_parallaxMountains",

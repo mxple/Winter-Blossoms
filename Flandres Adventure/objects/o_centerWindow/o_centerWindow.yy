@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "rarely used",
+    "path": "folders/Objects/rarely used.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_centerWindow",
