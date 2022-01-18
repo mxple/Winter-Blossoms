@@ -17,8 +17,9 @@ vsp = 0;
 hspRemaining=0;
 vspRemaining=0;
 image_speed = 0.12;
-image_xscale=2;
-image_yscale=2;
+image_xscale=1.5;
+image_yscale=1.5 ;
+
 dir = 1;
 rotation = 0;
 rotationBuffer = 0;

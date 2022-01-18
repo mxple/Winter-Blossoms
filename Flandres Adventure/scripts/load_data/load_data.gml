@@ -10,7 +10,7 @@ function load_data(profile){
 		health = o_gameData.pHealth;
 		save_data();
 		instance_create_layer(0,0,"Instances_1",o_pauseMenu);
-		return;
+		return; 
 	}
 	//Load JSON
 	var json = load_string(filename);

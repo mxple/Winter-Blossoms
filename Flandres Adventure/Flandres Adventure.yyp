@@ -116,7 +116,6 @@
     {"id":{"name":"sfxStep2","path":"sounds/sfxStep2/sfxStep2.yy",},"order":13,},
     {"id":{"name":"s_parallaxMidTrees","path":"sprites/s_parallaxMidTrees/s_parallaxMidTrees.yy",},"order":2,},
     {"id":{"name":"PlayerState_SoftLanding","path":"scripts/PlayerState_SoftLanding/PlayerState_SoftLanding.yy",},"order":5,},
-    {"id":{"name":"Sprite66","path":"sprites/Sprite66/Sprite66.yy",},"order":28,},
     {"id":{"name":"t_winterForest","path":"tilesets/t_winterForest/t_winterForest.yy",},"order":3,},
     {"id":{"name":"sfxJump","path":"sounds/sfxJump/sfxJump.yy",},"order":26,},
     {"id":{"name":"textBoxFont","path":"fonts/textBoxFont/textBoxFont.yy",},"order":3,},
