@@ -54,6 +54,7 @@
     {"id":{"name":"s_parallaxClouds","path":"sprites/s_parallaxClouds/s_parallaxClouds.yy",},"order":1,},
     {"id":{"name":"s_temp","path":"sprites/s_temp/s_temp.yy",},"order":14,},
     {"id":{"name":"shd_chromaticAbberation","path":"shaders/shd_chromaticAbberation/shd_chromaticAbberation.yy",},"order":1,},
+    {"id":{"name":"shd_pixelOutline","path":"shaders/shd_pixelOutline/shd_pixelOutline.yy",},"order":3,},
     {"id":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"order":6,},
     {"id":{"name":"o_firefly","path":"objects/o_firefly/o_firefly.yy",},"order":27,},
     {"id":{"name":"EnemyState_Jump","path":"scripts/EnemyState_Jump/EnemyState_Jump.yy",},"order":1,},
@@ -214,7 +215,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.7.606",
+    "IDEVersion": "2.3.3.574",
   },
   "resourceVersion": "1.4",
   "name": "Flandres Adventure",
