@@ -8,7 +8,7 @@ if (keyboard_check_pressed(vk_escape)) {
 		h = surface_get_height(application_surface);
 	
 		//take surface screenshot
-		pause_surf = surface_create(w, h);
+		if !surface_exists(pause_surf) pause_surf = surface_create(w, h);
 		surface_copy(pause_surf, 0, 0, application_surface);
 	
 		surf_buffer = buffer_create(w * h * 4, buffer_fixed, 1);
