@@ -1,5 +1,5 @@
 {
-  "type": 1,
+  "type": 2,
   "parent": {
     "name": "Shaders",
     "path": "folders/Shaders.yy",
