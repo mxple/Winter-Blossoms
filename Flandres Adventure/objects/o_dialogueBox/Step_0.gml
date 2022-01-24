@@ -59,8 +59,8 @@ if string_copy(text[page],currIndex+1,1) == "#" or pauseDuration != 10 {
 //page flipping
 if input and acceptingInput {
 	if currIndex < string_length(text[page]) {
-		text[page] = string_replace(text[page],"#","");
-		currIndex = string_length(text[page])
+		text[page] = string_replace_all(text[page],"#","");
+		currIndex = string_length(text[page]);
 	} else {
 		page += 1;
 		currIndex = 0;
