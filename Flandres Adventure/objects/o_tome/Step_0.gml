@@ -1,6 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-// Inherit the parent event
+/// @description 
+y = wave(startY, startY-50, 1.5, 0);
 event_inherited();
-y = wave(startY, startY-100, 90, 0);
