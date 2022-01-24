@@ -21,7 +21,10 @@ currIndex = 1;
 currText = "";
 page = 0;
 pauseDuration = 10;
-acceptingInput = true;
+acceptingInput = false;
+//delay
+alpha = 0;
+alarm[0] = 30;
 
 thingTalking = o_enemy; //obj that creates the textbox
 portrait = noone;
@@ -42,3 +45,4 @@ line_sep = 1.4*font_get_size(font);
 line_width = width - 2*margin;
 
 
+o_player.state = PLAYERSTATE.LOCKED;

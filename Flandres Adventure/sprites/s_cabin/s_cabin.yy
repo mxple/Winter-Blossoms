@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 319,
+  "bbox_right": 335,
   "bbox_top": 0,
-  "bbox_bottom": 191,
+  "bbox_bottom": 207,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 320,
-  "height": 192,
+  "width": 336,
+  "height": 208,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c4c4f08e-f3e1-40d2-a39c-dbe81ff98cd2","path":"sprites/s_cabin/s_cabin.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c4c4f08e-f3e1-40d2-a39c-dbe81ff98cd2","path":"sprites/s_cabin/s_cabin.yy",},"LayerId":{"name":"e17421af-6e99-4353-b876-23a449cb0e6d","path":"sprites/s_cabin/s_cabin.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_cabin","path":"sprites/s_cabin/s_cabin.yy",},"resourceVersion":"1.0","name":"c4c4f08e-f3e1-40d2-a39c-dbe81ff98cd2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"7bc2c301-fdc6-4f94-984d-818549fecd93","path":"sprites/s_cabin/s_cabin.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"7bc2c301-fdc6-4f94-984d-818549fecd93","path":"sprites/s_cabin/s_cabin.yy",},"LayerId":{"name":"ad540d23-e180-411d-aa36-2e2ab18d7016","path":"sprites/s_cabin/s_cabin.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_cabin","path":"sprites/s_cabin/s_cabin.yy",},"resourceVersion":"1.0","name":"7bc2c301-fdc6-4f94-984d-818549fecd93","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_cabin","path":"sprites/s_cabin/s_cabin.yy",},
@@ -41,8 +41,8 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"892cf7ea-7853-4f3f-a019-a377b40463a6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c4c4f08e-f3e1-40d2-a39c-dbe81ff98cd2","path":"sprites/s_cabin/s_cabin.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+            {"id":"289e19db-94d4-43e2-ad7c-9c858f6c904e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7bc2c301-fdc6-4f94-984d-818549fecd93","path":"sprites/s_cabin/s_cabin.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -65,12 +65,12 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e17421af-6e99-4353-b876-23a449cb0e6d","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ad540d23-e180-411d-aa36-2e2ab18d7016","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "cabin",
+    "path": "folders/Sprites/cabin.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_cabin",

@@ -37,3 +37,5 @@ global.KEY_ENTER = vk_enter
 #macro INPUT_BACK keyboard_check_pressed(vk_backspace) || keyboard_check_pressed(vk_escape)
 
 global.pause = false;
+global.touchingInteractable = false;
+global.activeInteractable = noone;

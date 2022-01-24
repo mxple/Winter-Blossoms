@@ -51,7 +51,7 @@ if string_copy(text[page],currIndex+1,1) == "#" or pauseDuration != 10 {
 	currText += string_copy(text[page],1, currIndex);
 	audio_stop_sound(sfxBeep);
 	pauseDuration--;
-} else {
+} else if alpha>=1{
 	currIndex += spd;
 	currText += string_copy(text[page],1, currIndex);
 }
@@ -66,6 +66,7 @@ if input and acceptingInput {
 		currIndex = 0;
 	}
 	if page >= array_length_1d(text) {
-		instance_destroy(self);
+		o_player.state = PLAYERSTATE.IDLE;
+		instance_destroy(id);
 	}	
 }

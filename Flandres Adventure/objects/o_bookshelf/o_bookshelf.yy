@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_door2",
-    "path": "sprites/s_door2/s_door2.yy",
+    "name": "s_bookshelf",
+    "path": "sprites/s_bookshelf/s_bookshelf.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,7 +33,7 @@
     "path": "folders/Objects/interactables.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_door2",
+  "name": "o_bookshelf",
   "tags": [],
   "resourceType": "GMObject",
 }

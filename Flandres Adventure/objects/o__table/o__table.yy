@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_door2",
-    "path": "sprites/s_door2/s_door2.yy",
+    "name": "s_table",
+    "path": "sprites/s_table/s_table.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,7 +33,7 @@
     "path": "folders/Objects/interactables.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_door2",
+  "name": "o__table",
   "tags": [],
   "resourceType": "GMObject",
 }
