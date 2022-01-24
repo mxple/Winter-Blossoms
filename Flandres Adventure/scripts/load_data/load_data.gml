@@ -23,10 +23,8 @@ function load_data(profile){
 		pInventory = data.inventory;
 		pEquipped = data.equipped;
 		pGold = data.gold;
-		lKnife = data.knife;
-		lWaki = data.waki;
-		lKatana = data.katana;
-		bYeti = data.yeti;
+		lTome = data.tome;
+		boss1 = data.b1;
 	}
 	room_goto(o_gameData.pRoom);
 	health = o_gameData.pHealth;

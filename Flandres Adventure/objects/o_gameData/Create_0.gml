@@ -11,12 +11,10 @@ pGold = 0;
 pHealth = 5;
 
 ///LOOT
-lKnife = true;
-lWaki = true;
-lKatana = true;
+lTome = false;
 
 ///BOSSES 
-bYeti = true;
+boss1 = true;
 
 //other
 frames = 0;

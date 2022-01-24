@@ -14,12 +14,9 @@ function save_data(){
 			inventory : pInventory, 
 			equipped : pEquipped,
 			gold : pGold,
-
-			knife : lKnife,
-			waki : lWaki,
-			katana : lKatana,
+			tome : lTome,
 			
-			yeti : bYeti
+			b1 : boss1
 		};
 	};
 	array_push(data, temp);
