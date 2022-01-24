@@ -33,7 +33,7 @@ if name != noone {
 }
 
 //beeping sfx
-if currIndex < string_length(text[page]) {
+if currIndex < string_length(text[page]) and alpha >= 1 {
 	if currIndex%1 == 0 {
 		audio_stop_sound(sfxBeep);
 		audio_play_sound(sfxBeep,1,false);
