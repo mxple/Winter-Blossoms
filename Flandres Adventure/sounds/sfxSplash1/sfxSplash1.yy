@@ -13,8 +13,8 @@
   "soundFile": "sfxSplash1.wav",
   "duration": 1.257438,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "movement",
+    "path": "folders/Sounds/movement.yy",
   },
   "resourceVersion": "1.0",
   "name": "sfxSplash1",

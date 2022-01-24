@@ -13,8 +13,8 @@
   "soundFile": "sfxMusic_MenuLoop.wav",
   "duration": 20.6451664,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "music",
+    "path": "folders/Sounds/music.yy",
   },
   "resourceVersion": "1.0",
   "name": "sfxMusic_MenuLoop",

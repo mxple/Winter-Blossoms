@@ -53,6 +53,6 @@ function PlayerState_Dying() {
 	#endregion
 	if animation_end() {
 		image_speed=0;	
-		room_transition(rGameOver,TRANSMODE.OUT);
+		room_transition(Game_Over,TRANSMODE.OUT);
 	}
 }

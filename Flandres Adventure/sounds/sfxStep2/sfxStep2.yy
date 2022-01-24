@@ -13,8 +13,8 @@
   "soundFile": "sfxStep2.wav",
   "duration": 0.67941,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "movement",
+    "path": "folders/Sounds/movement.yy",
   },
   "resourceVersion": "1.0",
   "name": "sfxStep2",

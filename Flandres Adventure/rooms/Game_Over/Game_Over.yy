@@ -25,8 +25,8 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_9B65915_1_1","path":"rooms/rGameOver/rGameOver.yy",},
-    {"name":"inst_776B76E2","path":"rooms/rGameOver/rGameOver.yy",},
+    {"name":"inst_9B65915_1_1","path":"rooms/Game_Over/Game_Over.yy",},
+    {"name":"inst_776B76E2","path":"rooms/Game_Over/Game_Over.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -54,7 +54,7 @@
     "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "rGameOver",
+  "name": "Game_Over",
   "tags": [],
   "resourceType": "GMRoom",
 }

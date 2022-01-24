@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "interactables",
-    "path": "folders/Sprites/interactables.yy",
+    "name": "backgrounds",
+    "path": "folders/Sprites/backgrounds.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_cabin",
