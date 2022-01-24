@@ -1,5 +1,5 @@
 /// @description glow effect
-if place_meeting(x,y,o_player) {
+if place_meeting(x,y,o_player) and global.activeInteractable==id {
 	shader_set(shd_smoothOutline);
 	var texture = sprite_get_texture(sprite_index, image_index);
 	var pixelH = texture_get_texel_height(texture);

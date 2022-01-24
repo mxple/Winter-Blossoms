@@ -2,5 +2,5 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function EnemyState_Dead(){
 	audio_play_sound(sfxHowl,0,false);
-	instance_destroy(self);
+	instance_destroy(id);
 }
