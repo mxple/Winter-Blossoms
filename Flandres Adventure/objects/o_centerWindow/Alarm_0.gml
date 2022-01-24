@@ -1,2 +1,2 @@
 window_center();
-instance_destroy(self);
+instance_destroy(id);
