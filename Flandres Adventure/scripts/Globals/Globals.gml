@@ -32,7 +32,7 @@ global.KEY_ENTER = vk_enter
 #macro INPUT_DOWN keyboard_check(global.KEY_DOWN)
 #macro INPUT_JUMP keyboard_check_pressed(global.KEY_JUMP)
 #macro INPUT_ATTACK keyboard_check_pressed(global.KEY_ATTACK)
-#macro INPUT_SPECIAL keyboard_check(global.KEY_SPECIAL)
+#macro INPUT_SPECIAL keyboard_check_pressed(global.KEY_SPECIAL)
 #macro INPUT_ENTER keyboard_check_pressed(global.KEY_ENTER)
 #macro INPUT_BACK keyboard_check_pressed(vk_backspace) || keyboard_check_pressed(vk_escape)
 

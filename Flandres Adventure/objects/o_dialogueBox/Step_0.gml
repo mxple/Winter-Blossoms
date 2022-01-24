@@ -1,13 +1,65 @@
 /// @description typewriter effect
+input = keyboard_check_pressed(vk_space) or keyboard_check_pressed(global.KEY_ATTACK) or keyboard_check_pressed(global.KEY_ENTER); 
+
+if string_copy(text[page],1,1) == "[" {
+	var optionsEnd = string_pos("]", text[page])-1;
+	var options = string_copy(text[page],2,optionsEnd)
+	talker = string_copy(options,1,1);
+	text[page] = string_delete(text[page],1,optionsEnd+2);
+}
+
+var name = noone;
+//portrait and name
+switch talker {
+	case "p": 
+		name = o_gameData.pName;
+		portrait = s_playerPortraitTalking;
+	break;
+	case "n":
+		name = noone;
+		portrait = noone;
+	break;
+	case "o": 
+		name = "???";
+		portrait = noone;//
+	break;
+}
+
+
 if name != noone {
 	currText = name + "\n";
 } else {
 	currText = "";
 }
-currIndex += spd;
-currText += string_copy(text[page],1, currIndex);
-if keyboard_check_pressed(vk_space) or keyboard_check_pressed(global.KEY_ATTACK) or keyboard_check_pressed(global.KEY_RIGHT) {
+
+//beeping sfx
+if currIndex < string_length(text[page]) {
+	if currIndex%1 == 0 {
+		audio_stop_sound(sfxBeep);
+		audio_play_sound(sfxBeep,1,false);
+	}
+} else {
+	audio_stop_sound(sfxBeep);
+}
+
+
+if pauseDuration <= 0 pauseDuration = 10;
+if string_copy(text[page],currIndex+1,1) == "#" or pauseDuration != 10 {
+	if pauseDuration == 10 {
+		text[page] = string_delete(text[page], currIndex+1, 1); //gets rid of #
+	}
+	currText += string_copy(text[page],1, currIndex);
+	audio_stop_sound(sfxBeep);
+	pauseDuration--;
+} else {
+	currIndex += spd;
+	currText += string_copy(text[page],1, currIndex);
+}
+
+//page flipping
+if input and acceptingInput {
 	if currIndex < string_length(text[page]) {
+		text[page] = string_replace(text[page],"#","");
 		currIndex = string_length(text[page])
 	} else {
 		page += 1;
@@ -15,6 +67,5 @@ if keyboard_check_pressed(vk_space) or keyboard_check_pressed(global.KEY_ATTACK)
 	}
 	if page >= array_length_1d(text) {
 		instance_destroy(self);
-	}
-	
+	}	
 }

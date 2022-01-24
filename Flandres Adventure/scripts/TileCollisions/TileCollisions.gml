@@ -17,6 +17,7 @@ function tileMeeting(xpos, ypos, layer_="Collisions"){
 }
 
 function tileMeetingPrecise(xpos, ypos, layer_="Collisions"){
+	if place_meeting(xpos,ypos,o_collidable) return true;
 	var tilemap = layer_tilemap_get_id(layer_),
 		checker = o_preciseTileChecker;
 	
@@ -37,10 +38,7 @@ function tileMeetingPrecise(xpos, ypos, layer_="Collisions"){
 				checker.image_index = tile;
 				if(place_meeting(xpos, ypos, checker)) return true;
 			 }
-			 
-		    // if(tile_get_index(tilemap_get(tilemap, _x, _y))){
-			//	return true;
-		     //}
+
 		 }
 	}
 	return false;

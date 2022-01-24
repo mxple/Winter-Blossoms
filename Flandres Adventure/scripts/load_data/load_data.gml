@@ -4,13 +4,10 @@ function load_data(profile){
 	profile += 1;
 	var filename = "profile"+string(profile)+".json";
 	if (!file_exists(filename)) {
-		instance_create_layer(0,0,"Instances_1",o_gameData);
-		o_gameData.profile = profile;
-		room_goto(Spawn);
-		health = o_gameData.pHealth;
-		save_data();
-		instance_create_layer(0,0,"Instances_1",o_pauseMenu);
-		return; 
+		instance_create_depth(0,0,0,o_nameInput);
+		o_nameInput.profile = profile;	
+		instance_deactivate_object(o_mainMenu);
+		return;
 	}
 	//Load JSON
 	var json = load_string(filename);

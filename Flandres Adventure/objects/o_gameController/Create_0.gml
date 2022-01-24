@@ -1,5 +1,5 @@
 /// @description
-particles_disabled = [Menu,Credits,rGameOver];
+particles_disabled = [Menu,Credits,rGameOver,Mysterious_Cabin];
 temp = 0;
 timer1=0;
 //music
