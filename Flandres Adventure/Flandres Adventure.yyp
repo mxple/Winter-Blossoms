@@ -186,7 +186,7 @@
     {"id":{"name":"__scribble_font_add_sprite","path":"scripts/__scribble_font_add_sprite/__scribble_font_add_sprite.yy",},"order":8,},
     {"id":{"name":"draw_text_scribble","path":"scripts/draw_text_scribble/draw_text_scribble.yy",},"order":0,},
     {"id":{"name":"dialogueBoxFont","path":"fonts/dialogueBoxFont/dialogueBoxFont.yy",},"order":3,},
-    {"id":{"name":"o__table","path":"objects/o__table/o__table.yy",},"order":3,},
+    {"id":{"name":"o_table","path":"objects/o_table/o_table.yy",},"order":3,},
     {"id":{"name":"s_playerAttackTwo","path":"sprites/s_playerAttackTwo/s_playerAttackTwo.yy",},"order":9,},
     {"id":{"name":"__scribble_config_behaviours","path":"scripts/__scribble_config_behaviours/__scribble_config_behaviours.yy",},"order":0,},
     {"id":{"name":"PlayerState_Jumping","path":"scripts/PlayerState_Jumping/PlayerState_Jumping.yy",},"order":6,},

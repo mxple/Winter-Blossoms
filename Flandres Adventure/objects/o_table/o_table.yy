@@ -33,7 +33,7 @@
     "path": "folders/Objects/interactables.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o__table",
+  "name": "o_table",
   "tags": [],
   "resourceType": "GMObject",
 }
