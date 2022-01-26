@@ -6,7 +6,6 @@ jumpSpeed = -12;
 dragcoef = 10;
 accel = 0.7;
 deccel = 0.5;
-fric = 0.95;
 minJump = 6;
 
 //variables

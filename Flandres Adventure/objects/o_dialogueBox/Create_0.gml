@@ -44,5 +44,3 @@ margin = 16;
 line_sep = 1.4*font_get_size(font);
 line_width = width - 2*margin;
 
-
-o_player.state = PLAYERSTATE.LOCKED;
