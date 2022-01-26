@@ -66,7 +66,7 @@ if input and acceptingInput {
 		currIndex = 0;
 	}
 	if page >= array_length_1d(text) {
-		o_player.state = PLAYERSTATE.IDLE;
+		o_player.acceptingInput = true;
 		instance_destroy(id);
 	}	
 }

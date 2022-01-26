@@ -19,4 +19,4 @@ if INPUT_ATTACK		fsm.trigger("attack");
 					fsm.trigger("transition");
 if global.pause		fsm.trigger("pause");
 
-//show_debug_message(fsm.get_current_state()+"   "+string(jump)+"    "+string(on_ground));
+show_debug_message(fsm.get_current_state()+"   "+string(vsp));

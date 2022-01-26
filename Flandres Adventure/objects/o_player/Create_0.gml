@@ -97,6 +97,7 @@ fsm.
 			apply_gravity();
 			collide_x();
 			collide_y();	
+			show_debug_message("osidfhjasoi");
 		}
 	})
 	.add("falling", {
@@ -244,11 +245,12 @@ fsm.
 	.add("paused", {
 		enter: function() {
 			image_speed = 0;
+			maskHB = mask_index;
 			mask_index = noone;
 		},
 		step: function() {
 			//unpause
-			if !global.pause fsm.change(fsm.get_previous_state(), undefined, function() {} );
+			//if !global.pause fsm.change(fsm.get_previous_state(), undefined, function() {} );
 		},
 		leave: function() {
 			//change mnum
@@ -258,8 +260,7 @@ fsm.
 	})
 	.add_transition("jump", ["idle","running","softLanding"], "jumping")
 	.add_transition("attack", ["idle","running","jumping","falling","softLanding"], "attack1")
-	//.add_transition("transition", "jumping", "running", function() { return (on_ground and hmove); })
-	//.add_transition("transition", "jumping", "idle", function() { return (on_ground); })
+	.add_transition("transition", "jumping", "running", function() { return ((on_ground) and vsp > 0); })
 	.add_transition("transition", "idle", "running", function() { return (hmove != 0); })
 	.add_transition("transition", "attack1", "attack2", function() { return (animation_end() and combo); })
 	.add_transition("transition", "attack2", "attack3", function() { return (animation_end() and !combo); })
