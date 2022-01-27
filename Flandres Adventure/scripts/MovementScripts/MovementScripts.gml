@@ -1,8 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function player_move_x() {
-	if hmove != 0 {
-		hsp += accel*hmove;
+	if input.hmove != 0 {
+		hsp += accel*input.hmove;
 		hsp = clamp (hsp, -walkSpeed, walkSpeed);
 	} else {
 		hsp = lerp(hsp, 0, deccel);

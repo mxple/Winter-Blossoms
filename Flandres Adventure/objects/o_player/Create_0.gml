@@ -1,8 +1,13 @@
- //mask_index = s_PlayerHB
- //declare methods
- event_user(15);
+//mask_index = s_PlayerHB
+//declare methods
+event_user(15);
+
+//input
+acceptingInput = true;
+input = {}
+check_inputs();
  
- //init sprites
+//init sprites
 sprites = {}
 init_sprites(
 	"idle"			,	s_playerIdle,
@@ -28,6 +33,7 @@ dragcoef = 10;
 
 accel = 0.7;
 deccel = 0.4;
+coyote = 4;
 
 //variables
 jump = false;
@@ -259,17 +265,18 @@ fsm.
 		}
 	})
 	.add_transition("jump", ["idle","running","softLanding"], "jumping")
+	.add_transition("coyote", "falling", "jumping", function() { return (tileMeetingPrecise(x, y+coyote, "Collisions")); }, function() { vsp = 0; })
 	.add_transition("attack", ["idle","running","jumping","falling","softLanding"], "attack1")
 	.add_transition("transition", "jumping", "running", function() { return ((on_ground) and vsp > 0); })
-	.add_transition("transition", "idle", "running", function() { return (hmove != 0); })
+	.add_transition("transition", "idle", "running", function() { return (input.hmove != 0); })
 	.add_transition("transition", "attack1", "attack2", function() { return (animation_end() and combo); })
 	.add_transition("transition", "attack2", "attack3", function() { return (animation_end() and !combo); })
 	.add_transition("transition", ["jumping","running","idle"],"falling", function() { return (vsp > 4 and !on_ground); })
 	.add_transition("transition", "idle","falling", function() { return (!on_ground); })
-	.add_transition("transition", ["hardLanding","softLanding","attack1","attack2","attack3"], "running", function() { return (animation_end() and hmove); })
+	.add_transition("transition", ["hardLanding","softLanding","attack1","attack2","attack3"], "running", function() { return (animation_end() and input.hmove); })
 	.add_transition("transition", ["hardLanding","softLanding","attack1","attack2","attack3"], "idle", function() { return (animation_end()); })
-	.add_transition("transition", "running", "idle", function() { return (on_ground and hmove == 0); })
+	.add_transition("transition", "running", "idle", function() { return (on_ground and input.hmove == 0); })
 	.add_transition("transition", "falling", "hardLanding", function() { return (on_ground and fsm.get_time(false) > 50); })
 	.add_transition("transition", "falling", "softLanding", function() { return (on_ground); })
-	.add_wildcard_transition("death", "dying", function() { return (fsm.get_current_state() != "paused"); })
+	.add_wildcard_transition("death", "dying", function() { return (fsm.get_current_state() != "dying"); })
 	.add_wildcard_transition("pause", "paused");
