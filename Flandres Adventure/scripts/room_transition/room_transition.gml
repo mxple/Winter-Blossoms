@@ -1,10 +1,8 @@
-function room_transition(tRoom=Spawn, m=TRANSMODE.OUT, alterPosition = false, destinationX = 0, destinationY= 0){
-    with (o_transition)
-    {
-        mode = m; 
+function room_transition(tRoom=Spawn, destinationX = 0, destinationY = 0, m=TRANSMODE.OUT){
+    with (o_transition) {
         targetRoom = tRoom;
-        self.alterPosition = alterPosition;
         self.destinationX = destinationX;
         self.destinationY = destinationY;
+		mode = m; 
     }
 }

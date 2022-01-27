@@ -14,9 +14,9 @@
   ],
   "layers": [
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"o_player","path":"objects/o_player/o_player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":540.0,"y":277.0,"resourceVersion":"1.0","name":"inst_2F6B086D_1_2","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":0.0,"resourceVersion":"1.0","name":"inst_31AD7A5B_1_2","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_transition","path":"objects/o_transition/o_transition.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":0.0,"resourceVersion":"1.0","name":"inst_9B65915_1_2","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"o_player","path":"objects/o_player/o_player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":544.0,"y":256.0,"resourceVersion":"1.0","name":"inst_65904957","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[
@@ -59,7 +59,6 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_2F6B086D_1_2","path":"rooms/Mysterious_Cabin/Mysterious_Cabin.yy",},
     {"name":"inst_31AD7A5B_1_2","path":"rooms/Mysterious_Cabin/Mysterious_Cabin.yy",},
     {"name":"inst_9B65915_1_2","path":"rooms/Mysterious_Cabin/Mysterious_Cabin.yy",},
     {"name":"inst_51E17E05","path":"rooms/Mysterious_Cabin/Mysterious_Cabin.yy",},
@@ -77,6 +76,7 @@
     {"name":"inst_22421F12","path":"rooms/Mysterious_Cabin/Mysterious_Cabin.yy",},
     {"name":"inst_5251B09","path":"rooms/Mysterious_Cabin/Mysterious_Cabin.yy",},
     {"name":"inst_18FE8897","path":"rooms/Mysterious_Cabin/Mysterious_Cabin.yy",},
+    {"name":"inst_65904957","path":"rooms/Mysterious_Cabin/Mysterious_Cabin.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

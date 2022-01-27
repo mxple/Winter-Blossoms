@@ -161,7 +161,7 @@ fsm.
 			collide_y();
 			if animation_end() {
 				image_speed=0;	
-				room_transition(Game_Over,TRANSMODE.OUT);
+				room_transition(Game_Over);
 			}
 		}
 	})
