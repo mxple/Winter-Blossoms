@@ -81,6 +81,6 @@ function attack(maskHB, damage) {
 			}
 		}
 	}
-	ds_list_destroy(hitByAttackNow);
+	if animation_end() ds_list_destroy(hitByAttackNow);
 	mask_index = temp;
 }

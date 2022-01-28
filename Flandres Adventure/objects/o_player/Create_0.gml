@@ -56,7 +56,7 @@ image_speed = 0.12; //12 fps
 dir = 1;
 
 //state machine
-fsm = new SnowState("idle");
+fsm = new SnowState("paused");
 
 fsm.
 	event_set_default_function("draw", 
@@ -102,8 +102,7 @@ fsm.
 			if (vsp < 0) && (!keyboard_check(global.KEY_JUMP)) vsp = max(vsp,jumpSpeed/minJump);
 			apply_gravity();
 			collide_x();
-			collide_y();	
-			show_debug_message("osidfhjasoi");
+			collide_y();
 		}
 	})
 	.add("falling", {
@@ -161,7 +160,7 @@ fsm.
 			collide_y();
 			if animation_end() {
 				image_speed=0;	
-				room_transition(Game_Over);
+				room_transition(Game_Over,TRANSMODE.OUT);
 			}
 		}
 	})
@@ -265,7 +264,7 @@ fsm.
 		}
 	})
 	.add_transition("jump", ["idle","running","softLanding"], "jumping")
-	.add_transition("coyote", "falling", "jumping", function() { return (tileMeetingPrecise(x, y+coyote, "Collisions")); }, function() { vsp = 0; })
+	.add_transition("coyote", "falling", "jumping", function() { return (tileMeetingPrecise(x, y+coyote, "Collisions")); }, function() { vsp = 0; show_debug_message("coyote"); })
 	.add_transition("attack", ["idle","running","jumping","falling","softLanding"], "attack1")
 	.add_transition("transition", "jumping", "running", function() { return ((on_ground) and vsp > 0); })
 	.add_transition("transition", "idle", "running", function() { return (input.hmove != 0); })
