@@ -46,7 +46,6 @@ vspRemaining = 0;
 
 hitByAttack = ds_list_create();
 combo = false;
-drawHUD = true;
 flash = 0;
 
 
@@ -272,6 +271,7 @@ fsm.
 	.add_transition("transition", "attack2", "attack3", function() { return (animation_end() and !combo); })
 	.add_transition("transition", ["jumping","running","idle"],"falling", function() { return (vsp > 4 and !on_ground); })
 	.add_transition("transition", "idle","falling", function() { return (!on_ground); })
+	.add_transition("transition", ["attack1","attack2","attack3"], "falling", function() { return (animation_end() and !on_ground); })
 	.add_transition("transition", ["hardLanding","softLanding","attack1","attack2","attack3"], "running", function() { return (animation_end() and input.hmove); })
 	.add_transition("transition", ["hardLanding","softLanding","attack1","attack2","attack3"], "idle", function() { return (animation_end()); })
 	.add_transition("transition", "running", "idle", function() { return (on_ground and input.hmove == 0); })
