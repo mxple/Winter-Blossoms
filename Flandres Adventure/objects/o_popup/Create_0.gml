@@ -1,5 +1,7 @@
-global.popup = true;
-instanceToDestroy = -1;
+global.freeze = true;
+global.pausing = false;
+
+destroyInteractable = -1;
 
 maxDarkenAlpha = 0.75;
 maxSpriteAlpha = 1;
@@ -66,8 +68,9 @@ fsm.
 			darkenAlpha = approach(darkenAlpha, -1, 0.05);
 			if darkenAlpha < 0 {
 				o_player.acceptingInput = true;
-				global.popup = false;
-				if instanceToDestroy != -1 instance_destroy(instanceToDestroy);
+				global.freeze = false;
+				global.pausing = true;
+				if destroyInteractable != -1 instance_destroy(destroyInteractable);
 				instance_destroy();
 			}
 		}

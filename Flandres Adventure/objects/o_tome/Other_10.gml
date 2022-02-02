@@ -7,5 +7,5 @@ with instance_create_layer(0,0,"overlays",o_popup) {
 	bottomText = "A dusty book with an illegible runic title and faded letters. It looks important though.";
 	sprite_index = s_tome;
 	spriteSize = 4;
-	instanceToDestroy = id;
+	destroyInteractable = other.id;
 }

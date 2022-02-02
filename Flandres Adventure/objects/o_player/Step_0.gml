@@ -20,7 +20,7 @@ if input.jump {
 }
 if input.atk		fsm.trigger("attack");
 					fsm.trigger("transition");
-if global.pause		fsm.trigger("pause");
+if global.freeze	fsm.trigger("pause");
 if health <= 0		fsm.trigger("death");
 
-show_debug_message(fsm.get_current_state()+"   "+string(vsp));
+//show_debug_message(fsm.get_current_state()+"   "+string(vsp));
