@@ -1,5 +1,7 @@
 /// @description 
 c = c_white;
+draw_set_halign(fa_left);
+
 if portrait != noone {
 	draw_sprite_ext(portrait, 0, x_start, y_start-184,1.5,1.5,0,c_white,1);
 }

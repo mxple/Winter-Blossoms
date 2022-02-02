@@ -254,7 +254,9 @@ fsm.
 		},
 		step: function() {
 			//unpause
-			//if !global.pause fsm.change(fsm.get_previous_state(), undefined, function() {} );
+			if fsm.get_previous_state() != undefined {
+				if !global.freeze fsm.change(fsm.get_previous_state(), undefined, function() {} );
+			}
 		},
 		leave: function() {
 			//change mnum

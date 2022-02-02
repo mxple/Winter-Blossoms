@@ -27,7 +27,7 @@
     {"varType":7,"value":"$FFFFFFFF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"hue","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"0.2","rangeEnabled":true,"rangeMin":0.0,"rangeMax":1.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"luminosity","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"0.01","rangeEnabled":true,"rangeMin":0.0,"rangeMax":0.2,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"wobble","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":5,"value":"undefined","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"objFollowing","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"noone","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"objFollowing","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"1","rangeEnabled":true,"rangeMin":1.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"followDelay","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],

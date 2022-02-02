@@ -3,8 +3,8 @@
 o_gameData.lTome = true;
 
 with instance_create_layer(0,0,"overlays",o_popup) {
-	upperText = "Aquired!\nAncient Tome";
-	bottomText = "A dusty book with an illegible runic title and faded letters. It looks important though.";
+	upperText = "Acquired!\nAncient Tome";
+	bottomText = "A dusty book...the title is in runes? It's illegible, but I'll keep it just in case.";
 	sprite_index = s_tome;
 	spriteSize = 4;
 	destroyInteractable = other.id;
