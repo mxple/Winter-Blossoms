@@ -5,4 +5,4 @@ font = menuFontInput;
 fontSize = font_get_size(font);
 alpha = 0;
 
-input = "";
+input = "Alex";

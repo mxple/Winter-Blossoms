@@ -28,7 +28,8 @@ alarm[0] = 30;
 
 thingTalking = o_enemy; //obj that creates the textbox
 portrait = noone;
-talker = noone
+talker = noone;
+expression = noone;
 
 //textbox size
 x_padding = GUI_W/24;

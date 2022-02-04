@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"57c57d80-5dc3-44a2-9894-618e1de22e79","path":"sprites/s_playerPortraitTalking/s_playerPortraitTalking.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"57c57d80-5dc3-44a2-9894-618e1de22e79","path":"sprites/s_playerPortraitTalking/s_playerPortraitTalking.yy",},"LayerId":{"name":"3d70b03e-00e2-494b-80ab-40085967f33c","path":"sprites/s_playerPortraitTalking/s_playerPortraitTalking.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_playerPortraitTalking","path":"sprites/s_playerPortraitTalking/s_playerPortraitTalking.yy",},"resourceVersion":"1.0","name":"57c57d80-5dc3-44a2-9894-618e1de22e79","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c984c706-76f6-45c0-b261-5c7ea76bcf69","path":"sprites/s_playerPortraitBlush/s_playerPortraitBlush.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c984c706-76f6-45c0-b261-5c7ea76bcf69","path":"sprites/s_playerPortraitBlush/s_playerPortraitBlush.yy",},"LayerId":{"name":"426e6599-0386-4b4e-8cac-a2056c06a3df","path":"sprites/s_playerPortraitBlush/s_playerPortraitBlush.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_playerPortraitBlush","path":"sprites/s_playerPortraitBlush/s_playerPortraitBlush.yy",},"resourceVersion":"1.0","name":"c984c706-76f6-45c0-b261-5c7ea76bcf69","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_playerPortraitTalking","path":"sprites/s_playerPortraitTalking/s_playerPortraitTalking.yy",},
+    "spriteId": {"name":"s_playerPortraitBlush","path":"sprites/s_playerPortraitBlush/s_playerPortraitBlush.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b05c555c-b95d-4e76-bd34-023e4d72c01b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"57c57d80-5dc3-44a2-9894-618e1de22e79","path":"sprites/s_playerPortraitTalking/s_playerPortraitTalking.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f4a98774-5c97-413a-ad2c-84e14301791e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c984c706-76f6-45c0-b261-5c7ea76bcf69","path":"sprites/s_playerPortraitBlush/s_playerPortraitBlush.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_playerPortraitTalking","path":"sprites/s_playerPortraitTalking/s_playerPortraitTalking.yy",},
+    "parent": {"name":"s_playerPortraitBlush","path":"sprites/s_playerPortraitBlush/s_playerPortraitBlush.yy",},
     "resourceVersion": "1.3",
-    "name": "s_playerPortraitTalking",
+    "name": "s_playerPortraitBlush",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3d70b03e-00e2-494b-80ab-40085967f33c","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"426e6599-0386-4b4e-8cac-a2056c06a3df","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/player/Portraits.yy",
   },
   "resourceVersion": "1.0",
-  "name": "s_playerPortraitTalking",
+  "name": "s_playerPortraitBlush",
   "tags": [],
   "resourceType": "GMSprite",
 }
