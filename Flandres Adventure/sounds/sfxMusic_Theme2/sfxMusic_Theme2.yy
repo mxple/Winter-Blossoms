@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.59,
+  "volume": 0.39,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfxDing.wav",
-  "duration": 2.553379,
+  "soundFile": "sfxMusic_Theme2.mp3",
+  "duration": 97.48898,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "music",
+    "path": "folders/Sounds/music.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sfxDing",
+  "name": "sfxMusic_Theme2",
   "tags": [],
   "resourceType": "GMSound",
 }

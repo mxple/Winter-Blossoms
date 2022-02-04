@@ -1,20 +1,13 @@
 /// @description textbox params
 text = [
 	"[n]",
-	"[p] ##...",
+	"[p1] ##...",
 	"[p] Where am I?",
 	"[p] Ack,# my head hurts!",
-	"[p] I remember...# oh no! My mission!",
-	"[p] I have to buy medicine at the port!## The chieftan is counting on me!",
+	"[p] I remember...# Oh no! I was on my way to buy medicine at the port!# The elders are counting on me!",
 	"[p] But...# where even am I?",
 	"[p] I was trekking my way through the forest just a moment ago...",
-	"[p] Oh right!## There was a yeti in the way...",
-	"[p] Looking back, it was cocky of me to try to take on a yeti...",
-	"[p] Even though I'm the strongest swordsman in my village, I'm still only human.## Monsters are simply much too powrful...",
-	"[p] It's depressing that even a small yeti can easily overpower me...# but what humans lack in strength, we have intellect and numbers!...",
-	"[p] Or at least that's what master keeps telling me.# No one else in that little village can hope to offer any value on the battle field pfft.",
-	"[p] Though...# I guess it's my rogue-like nature that ended me up here..."
-	
+	"[p] And my bag is gone!# I can't enter the Kingdom without documentation..."	
 ];
 spd = 0.5;
 currIndex = 1;
@@ -22,6 +15,7 @@ currText = "";
 page = 0;
 pauseDuration = 10;
 acceptingInput = false;
+drawArrow = false;
 //delay
 alpha = 0;
 alarm[0] = 30;

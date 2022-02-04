@@ -21,6 +21,7 @@ spriteSize = 1;
 sfx = sfxDing;
 audio_play_sound(sfx,0,false);
 
+
 darkenAlpha = 0;
 darken = surface_create(GUI_W,GUI_H);
 

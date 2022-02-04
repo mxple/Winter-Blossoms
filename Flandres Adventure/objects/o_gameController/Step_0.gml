@@ -1,4 +1,12 @@
 /// @description 
+if global.freeze {
+	audio_pause_sound(current_song);
+	audio_pause_sound(next_song);
+	exit;
+} else {
+	audio_resume_sound(current_song);
+	audio_resume_sound(next_song);
+}
 //bgm
 if !audio_is_playing(next_song) {
 	audio_play_sound(next_song,1000,loop);
